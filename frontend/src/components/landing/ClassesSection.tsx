@@ -1,7 +1,7 @@
 import React from 'react';
 import kidsSilksImg from '../../assets/images/kids-silks.png';
-import adultSilksImg from '../../assets/images/adult-silks.png';
-import scheduleSilksImg from '../../assets/images/schedule-silks.png';
+import victoriaSplitImg from '../../assets/images/victoria-split.jpg';
+import victoriaStretchImg from '../../assets/images/victoria-stretch.jpg';
 import { ClassCard } from '../common/ClassCard';
 import { ClassCardProps } from '../../types/components';
 import { GOOGLE_MAPS_LOCATION_URL } from '../../constants/config';
@@ -20,18 +20,18 @@ export const ClassesSection: React.FC = () => {
     {
       title: 'Jóvenes / Adultos (+15 años)',
       description:
-        'Descubrí tu fuerza, flexibilidad y gracia en Vulpiare. Clases de acrobacia en tela adaptadas a todos los niveles, desde principiantes hasta avanzados.',
-      image: adultSilksImg,
-      imageAlt: 'Mujer adulta realizando una figura de acrobacia en tela púrpura',
-      badge: 'Adultos',
+        'Descubrí tu fuerza, flexibilidad y gracia en Vulpiare. Clases de acrobacia en tela adaptadas a todos los niveles, dirigidas por María Victoria Benetto.',
+      image: victoriaSplitImg,
+      imageAlt: 'María Victoria Benetto realizando una apertura de piernas acrobática en telas rojas',
+      badge: 'Adultos / Nivel Avanzado',
       whatsappMessage: 'Hola Victoria! Quiero más información sobre las clases para jóvenes y adultos.',
     },
     {
       title: 'Horarios y Ubicación',
       description:
         'Clases de prueba y horarios regulares de lunes a sábado, de 9:00 am a 9:30 pm. Coordiná tu clase según tu disponibilidad.',
-      image: scheduleSilksImg,
-      imageAlt: 'Figura en telas aéreas púrpuras en un estudio de danza sereno',
+      image: victoriaStretchImg,
+      imageAlt: 'María Victoria Benetto ejecutando una figura aérea de flexibilidad en telas rojas',
       badge: 'Horarios',
       whatsappMessage: 'Hola Victoria! Quiero consultar los horarios disponibles en Vulpiare.',
       mapsUrl: GOOGLE_MAPS_LOCATION_URL,

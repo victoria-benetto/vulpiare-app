@@ -1,5 +1,5 @@
 import React from 'react';
-import heroAcrobatImg from '../../assets/images/hero-acrobat.png';
+import victoriaPoseImg from '../../assets/images/victoria-pose.jpg';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ export const HeroSection: React.FC = () => {
             </span>
           </h1>
           <p className="mt-6 max-w-md font-serif text-lg leading-relaxed text-gray-600 sm:text-xl">
-            Descubrí tu fuerza, flexibilidad y gracia en Vulpiare. Clases de acrobacia en tela para todas las edades.
+            Descubrí tu fuerza, flexibilidad y gracia en Vulpiare. Clases de acrobacia en tela para todas las edades y niveles.
           </p>
           <div className="mt-8 flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
             <a
@@ -34,12 +34,12 @@ export const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Imagen Principal Hero */}
+        {/* Imagen Principal Hero (Foto Oficial de María Victoria Benetto) */}
         <div className="relative flex items-center justify-center rounded-3xl bg-gradient-to-br from-vulpiare-light via-vulpiare-medium/40 to-transparent p-6 md:p-8 shadow-xl">
           <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl shadow-md border-2 border-white">
             <img
-              src={heroAcrobatImg}
-              alt="Acróbata suspendida con gracia en telas aéreas de color púrpura"
+              src={victoriaPoseImg}
+              alt="María Victoria Benetto ejecutando una pose acrobática sobre telas rojas"
               className="h-full w-full object-cover"
             />
           </div>
