@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from '../../assets/images/logo.png';
 import { HeaderProps } from '../../types/components';
 import { ACADEMY_NAME } from '../../constants/config';
 
@@ -7,12 +8,17 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <header className="sticky top-0 z-40 border-b border-vulpiare-light/60 bg-white/85 backdrop-blur-md transition-all">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 md:px-10">
         <a
           href="#"
-          className="font-serif text-2xl font-bold tracking-wider text-vulpiare-dark transition-colors hover:text-vulpiare-dark/80"
+          className="flex items-center gap-3 font-serif text-2xl font-bold tracking-wider text-vulpiare-dark transition-colors hover:opacity-90 group"
         >
-          {academyName}
+          <img
+            src={logoImg}
+            alt="Logo Oficial Vulpiare Academia de Acrobacias"
+            className="h-11 w-11 rounded-full object-cover shadow-sm transition-transform group-hover:scale-105"
+          />
+          <span>{academyName}</span>
         </a>
         <a
           href="#horarios"
