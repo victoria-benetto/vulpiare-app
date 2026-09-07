@@ -10,7 +10,6 @@ export const HeroSection: React.FC = () => {
             Academia de Acrobacias Aéreas
           </span>
           <h1 className="font-serif text-4xl font-extrabold leading-tight text-vulpiare-dark sm:text-5xl md:text-6xl">
-            Echá raíces. <br className="hidden sm:inline" />
             <span className="text-vulpiare-dark/90 underline decoration-vulpiare-medium decoration-wavy decoration-2">
               Desplegá tus alas.
             </span>

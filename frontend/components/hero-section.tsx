@@ -9,7 +9,7 @@ export function HeroSection() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-10 md:px-10 md:py-24">
         <div className="flex flex-col items-start gap-6 text-center md:text-left md:items-start">
           <h1 className="text-balance font-serif text-4xl font-semibold leading-tight text-primary sm:text-5xl md:text-6xl">
-            Echá raíces. Desplegá tus alas.
+            Desplegá tus alas.
           </h1>
           <p className="max-w-md text-pretty font-serif text-lg leading-relaxed text-muted-foreground sm:text-xl">
             Descubrí tu fuerza, flexibilidad y gracia en Vulpiare. Clases de

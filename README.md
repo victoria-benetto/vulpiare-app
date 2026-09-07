@@ -10,7 +10,7 @@ Este repositorio alberga la plataforma de la academia, diseñada bajo una arquit
 
 ### 📌 Fase 1: Landing Page Pública de Conversión (Fase Actual)
 - **Objetivo**: Atraer nuevos alumnos y transmitir la identidad de la marca Vulpiare.
-- **Hero Section**: Destacando el lema *"Echá raíces. Desplegá tus alas."* y llamado a la acción para clases de prueba.
+- **Hero Section**: Destacando el lema *"Desplegá tus alas."* y llamado a la acción para clases de prueba.
 - **Banner Oficial de la Instructora**: Reconocimiento a **María Victoria Benetto**, Campeona Sudamericana Nivel Premium.
 - **Componente Reutilizable `ClassCard`**: Tarjetas descriptivas para Grupo Infantil (6 a 12 años), Jóvenes/Adultos (+15 años) y Horarios/Ubicación con integración a Google Maps.
 - **Botón Flotante de WhatsApp**: Conversión directa mediante la API de `wa.me` con mensaje predefinido para consultas inmediatas.
