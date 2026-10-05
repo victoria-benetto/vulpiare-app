@@ -94,7 +94,7 @@ export const FaqSection: React.FC = () => {
                     <span className="w-8 h-8 rounded-full bg-secondary-fixed text-primary flex items-center justify-center text-sm font-bold shrink-0">
                       {faq.id}
                     </span>
-                    <span>{faq.question}</span>
+                    <span className="text-base sm:text-title-lg">{faq.question}</span>
                   </span>
                   <span
                     className={`material-symbols-outlined text-secondary transition-transform duration-300 shrink-0 ${
@@ -105,7 +105,7 @@ export const FaqSection: React.FC = () => {
                   </span>
                 </button>
                 {isOpen && (
-                  <div className="mt-space-md pl-11 pr-4 font-body-md text-body-md text-on-surface-variant leading-relaxed border-t border-surface-container pt-3 animate-fadeIn">
+                  <div className="mt-space-md pl-0 sm:pl-11 pr-2 sm:pr-4 font-body-md text-body-md text-on-surface-variant leading-relaxed border-t border-surface-container pt-3 animate-fadeIn">
                     {faq.answer}
                   </div>
                 )}

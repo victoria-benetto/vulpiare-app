@@ -76,9 +76,9 @@ export const ScheduleSection: React.FC = () => {
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex items-center gap-space-xs p-1 rounded-full bg-surface-container-high self-start md:self-auto">
+          <div className="flex items-center gap-1 p-1 rounded-full bg-surface-container-high self-start md:self-auto max-w-full overflow-x-auto">
             <button
-              className={`px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase tracking-wider transition-all font-bold ${
+              className={`px-3.5 sm:px-space-md py-1.5 sm:py-space-xs rounded-full font-label-md text-xs sm:text-label-md uppercase tracking-wider transition-all font-bold whitespace-nowrap ${
                 activeFilter === 'all'
                   ? 'bg-primary text-on-primary shadow-sm'
                   : 'bg-transparent text-on-surface-variant hover:text-primary'
@@ -89,7 +89,7 @@ export const ScheduleSection: React.FC = () => {
               Todos
             </button>
             <button
-              className={`px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase tracking-wider transition-all font-bold ${
+              className={`px-3.5 sm:px-space-md py-1.5 sm:py-space-xs rounded-full font-label-md text-xs sm:text-label-md uppercase tracking-wider transition-all font-bold whitespace-nowrap ${
                 activeFilter === 'manana'
                   ? 'bg-primary text-on-primary shadow-sm'
                   : 'bg-transparent text-on-surface-variant hover:text-primary'
@@ -100,7 +100,7 @@ export const ScheduleSection: React.FC = () => {
               Mañana
             </button>
             <button
-              className={`px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase tracking-wider transition-all font-bold ${
+              className={`px-3.5 sm:px-space-md py-1.5 sm:py-space-xs rounded-full font-label-md text-xs sm:text-label-md uppercase tracking-wider transition-all font-bold whitespace-nowrap ${
                 activeFilter === 'tarde'
                   ? 'bg-primary text-on-primary shadow-sm'
                   : 'bg-transparent text-on-surface-variant hover:text-primary'
@@ -184,26 +184,26 @@ export const ScheduleSection: React.FC = () => {
         </div>
 
         {/* Tarjetas Móviles para Pantallas Pequeñas */}
-        <div className="md:hidden flex flex-col gap-3">
+        <div className="md:hidden flex flex-col gap-3.5">
           {filteredSchedule.map((item) => (
             <div
               key={item.id}
-              className="p-4 rounded-2xl bg-surface-container-lowest shadow-[0_4px_16px_-2px_rgba(74,40,109,0.05)] flex flex-col gap-2 border border-surface-container"
+              className="p-4 rounded-2xl bg-surface-container-lowest shadow-[0_4px_16px_-2px_rgba(74,40,109,0.05)] flex flex-col gap-2.5 border border-surface-container"
             >
               <div className="flex items-center justify-between">
-                <span className="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-bold uppercase tracking-wider whitespace-nowrap">
+                <span className="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-[11px] font-bold uppercase tracking-wider whitespace-nowrap">
                   {item.turnoEtiqueta}
                 </span>
-                <span className="font-label-xs text-label-xs text-outline">{item.cupo}</span>
+                <span className="text-[11px] text-outline font-medium">{item.cupo}</span>
               </div>
-              <div className="flex justify-between items-baseline">
+              <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                 <h4 className="font-title-md text-title-md text-primary font-bold">{item.grupo}</h4>
-                <span className="font-title-md text-title-md text-secondary font-semibold">{item.horario}</span>
+                <span className="font-title-md text-sm sm:text-title-md text-secondary font-bold">{item.horario}</span>
               </div>
-              <div className="flex items-center justify-between pt-1">
-                <span className="font-body-sm text-body-sm text-on-surface-variant">{item.dias}</span>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 pt-1 border-t border-surface-container/60">
+                <span className="font-body-sm text-xs sm:text-body-sm text-on-surface-variant font-medium">{item.dias}</span>
                 <a
-                  className="px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-xs text-label-xs font-semibold hover:bg-primary-container transition-colors whitespace-nowrap"
+                  className="w-full sm:w-auto px-4 py-2 rounded-full bg-primary text-on-primary font-label-xs text-xs font-bold hover:bg-primary-container transition-colors text-center whitespace-nowrap"
                   href={`https://wa.me/${VULPIARE_PHONE}?text=Hola%20Victoria,%20quiero%20agendar%20prueba%20para%20${encodeURIComponent(item.consultarText)}`}
                   rel="noopener noreferrer"
                   target="_blank"
@@ -216,15 +216,15 @@ export const ScheduleSection: React.FC = () => {
         </div>
 
         {/* Callout debajo de horarios */}
-        <div className="mt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md p-space-md rounded-2xl bg-surface-container border border-secondary/15">
-          <div className="flex items-center gap-space-sm">
-            <span className="material-symbols-outlined text-secondary text-[26px]">chat</span>
-            <span className="font-body-md text-body-md text-on-surface">
+        <div className="mt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md p-4 sm:p-space-md rounded-2xl bg-surface-container border border-secondary/15">
+          <div className="flex items-center gap-3 sm:gap-space-sm">
+            <span className="material-symbols-outlined text-secondary text-[24px] flex-shrink-0">chat</span>
+            <span className="font-body-md text-sm sm:text-body-md text-on-surface leading-snug">
               ¿Tenés dudas sobre cuál turno es mejor para tu rutina? Hablá directo con Victoria.
             </span>
           </div>
           <a
-            className="px-space-lg py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary-container transition-all flex items-center gap-1 font-semibold whitespace-nowrap"
+            className="w-full sm:w-auto text-center justify-center px-space-lg py-2.5 sm:py-space-xs rounded-full bg-primary text-on-primary font-label-md text-xs sm:text-label-md uppercase tracking-wider hover:bg-primary-container transition-all flex items-center gap-1 font-semibold whitespace-nowrap"
             href={`https://wa.me/${VULPIARE_PHONE}`}
             rel="noopener noreferrer"
             target="_blank"

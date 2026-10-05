@@ -13,31 +13,31 @@ export const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
           {/* Columna Texto Hero */}
           <div className="lg:col-span-6 flex flex-col items-start gap-space-md z-10">
-            <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-highest text-primary shadow-sm border border-secondary/20">
-              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-              <span className="font-label-xs text-label-xs uppercase tracking-widest text-primary font-bold">
+            <div className="inline-flex items-center gap-space-xs px-3 sm:px-space-md py-1 sm:py-space-xs rounded-full bg-surface-container-highest text-primary shadow-sm border border-secondary/20">
+              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse flex-shrink-0" />
+              <span className="font-label-xs text-[10px] sm:text-label-xs uppercase tracking-widest text-primary font-bold">
                 Acrobacias Aéreas en Tela · Profesora Victoria
               </span>
             </div>
 
-            <h1 className="font-display-hero text-display-hero text-primary tracking-tight leading-tight">
+            <h1 className="font-display-hero text-3xl sm:text-4xl lg:text-[56px] text-primary tracking-tight leading-tight">
               El arte de volar, <span className="italic font-normal text-secondary">fuerza</span> y expresión en tela
             </h1>
 
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+            <p className="font-body-lg text-body-md sm:text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
               Academia de acrobacias aéreas en tela para todas las edades dirigida por Victoria. Descubrí el placer de estar en el aire, ganar fuerza, flexibilidad y confianza corporal en un espacio cálido y profesional.
             </p>
 
             {/* Pill de no se necesita experiencia */}
-            <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-2xl bg-secondary-fixed/70 border border-secondary-fixed-dim text-on-secondary-fixed">
-              <span className="material-symbols-outlined text-secondary text-[20px]">stars</span>
-              <span className="font-title-md text-[14px] font-bold">¡No se necesita experiencia previa, es para todos los niveles!</span>
+            <div className="inline-flex items-center gap-space-xs px-3 sm:px-space-md py-2.5 sm:py-space-xs rounded-2xl bg-secondary-fixed/70 border border-secondary-fixed-dim text-on-secondary-fixed">
+              <span className="material-symbols-outlined text-secondary text-[18px] sm:text-[20px] flex-shrink-0">stars</span>
+              <span className="font-title-md text-xs sm:text-[14px] font-bold leading-snug">¡No se necesita experiencia previa, es para todos los niveles!</span>
             </div>
 
             {/* Botones CTA Hero */}
             <div className="flex flex-wrap items-center gap-space-sm pt-space-xs w-full sm:w-auto">
               <a
-                className="px-space-xl py-space-md rounded-full bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-wider shadow-lg hover:bg-primary-container hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-space-xs w-full sm:w-auto"
+                className="px-space-lg sm:px-space-xl py-3 sm:py-space-md rounded-full bg-primary text-on-primary font-label-md sm:font-label-lg text-label-md sm:text-label-lg uppercase tracking-wider shadow-lg hover:bg-primary-container hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-space-xs w-full sm:w-auto text-center"
                 href={`https://wa.me/${VULPIARE_PHONE}`}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -46,7 +46,7 @@ export const HeroSection: React.FC = () => {
                 <span>Agendar clase con Victoria</span>
               </a>
               <a
-                className="px-space-lg py-space-md rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg uppercase tracking-wider shadow-sm hover:bg-surface-container hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-space-xs border border-outline-variant w-full sm:w-auto"
+                className="px-space-md sm:px-space-lg py-3 sm:py-space-md rounded-full bg-surface-container-lowest text-primary font-label-md sm:font-label-lg text-label-md sm:text-label-lg uppercase tracking-wider shadow-sm hover:bg-surface-container hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-space-xs border border-outline-variant w-full sm:w-auto text-center"
                 href="#horarios"
               >
                 <span>Ver Grilla de Horarios</span>
@@ -55,7 +55,7 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Métricas y Badges de Seguridad / Cupos */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-lg w-full max-w-2xl border-t border-surface-container-high">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-space-md pt-space-lg w-full max-w-2xl border-t border-surface-container-high">
               <div className="flex items-start gap-space-xs">
                 <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
                   <span className="material-symbols-outlined text-[18px]">groups</span>
@@ -93,8 +93,8 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Columna Visual Hero Media */}
-          <div className="lg:col-span-6 relative flex justify-center items-center">
-            <div className="relative w-full aspect-[4/5] max-w-lg rounded-[2.5rem] overflow-hidden shadow-2xl bg-surface-container border border-surface-container-highest">
+          <div className="lg:col-span-6 relative flex justify-center items-center mt-6 lg:mt-0">
+            <div className="relative w-full min-h-[420px] sm:min-h-0 sm:aspect-[4/5] max-w-lg rounded-3xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl bg-surface-container border border-surface-container-highest">
               <img
                 alt="Acróbata en tela aérea en Vulpiare realizando figura en apertura con telas violetas - María Victoria Benetto"
                 className="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-700 ease-out"
@@ -103,24 +103,24 @@ export const HeroSection: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
               
               {/* Floating Badge Top Right */}
-              <div className="absolute top-6 right-6 px-space-md py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center gap-space-xs border border-surface-container">
+              <div className="absolute top-4 sm:top-6 right-4 sm:right-6 px-3 sm:px-space-md py-1 sm:py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center gap-space-xs border border-surface-container">
                 <span className="material-symbols-outlined text-secondary text-[16px]">verified</span>
-                <span className="font-label-xs text-label-xs text-primary uppercase font-bold tracking-wider">
+                <span className="font-label-xs text-[10px] sm:text-label-xs text-primary uppercase font-bold tracking-wider">
                   Ciclo Activo 2026
                 </span>
               </div>
 
               {/* Floating Pill Bottom Left */}
-              <div className="absolute bottom-6 left-6 right-6 p-space-md rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md shadow-xl flex items-center justify-between border border-surface-container">
-                <div className="flex items-center gap-space-sm">
+              <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 right-3 sm:right-6 p-3 sm:p-space-md rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md shadow-xl flex items-center justify-between gap-2 border border-surface-container">
+                <div className="flex items-center gap-2.5 sm:gap-space-sm min-w-0">
                   <img
                     alt="Isotipo Vulpiare"
-                    className="w-11 h-11 rounded-full object-contain border border-surface-container-highest"
+                    className="w-9 h-9 sm:w-11 sm:h-11 rounded-full object-contain border border-surface-container-highest flex-shrink-0"
                     src={logoImg}
                   />
-                  <div>
-                    <h4 className="font-title-md text-title-md text-primary leading-tight">Seguridad &amp; Técnica Aérea</h4>
-                    <p className="font-body-sm text-body-sm text-on-surface-variant">Colchones de impacto y telas de alta resistencia</p>
+                  <div className="min-w-0">
+                    <h4 className="font-title-md text-xs sm:text-title-md text-primary leading-tight font-bold truncate">Seguridad &amp; Técnica Aérea</h4>
+                    <p className="font-body-sm text-[11px] sm:text-body-sm text-on-surface-variant truncate">Colchones de impacto y telas de alta resistencia</p>
                   </div>
                 </div>
                 <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0">
