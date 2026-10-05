@@ -131,16 +131,22 @@ export const ScheduleSection: React.FC = () => {
                 {filteredSchedule.map((item) => (
                   <tr key={item.id} className="hover:bg-surface-container-low transition-colors">
                     <td className="py-space-md px-space-lg">
-                      <div className="flex items-center gap-space-xs">
-                        <span className={`w-2.5 h-2.5 rounded-full ${item.turno === 'manana' ? 'bg-secondary' : 'bg-primary'}`} />
-                        <span className="font-title-md text-title-md text-primary font-bold">{item.grupo}</span>
+                      <div className="flex items-start gap-2.5">
+                        <span className={`w-2.5 h-2.5 rounded-full shrink-0 mt-1.5 ${item.turno === 'manana' ? 'bg-secondary' : 'bg-primary'}`} />
+                        <div>
+                          <span className="font-title-md text-title-md text-primary font-bold block leading-tight">{item.grupo}</span>
+                          <span className="text-xs text-on-surface-variant block mt-0.5">{item.subtitulo}</span>
+                        </div>
                       </div>
-                      <span className="text-xs text-on-surface-variant block mt-0.5">{item.subtitulo}</span>
                     </td>
                     <td className="py-space-md px-space-md font-semibold text-on-surface">{item.dias}</td>
-                    <td className="py-space-md px-space-md font-bold text-primary text-base">{item.horario}</td>
-                    <td className="py-space-md px-space-md">
-                      <span className="px-space-sm py-1 rounded-full bg-surface-container-high text-primary font-bold text-xs">
+                    <td className="py-space-md px-space-md font-bold text-primary text-base whitespace-nowrap">{item.horario}</td>
+                    <td className="py-space-md px-space-md whitespace-nowrap">
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap inline-block ${
+                        item.turno === 'manana'
+                          ? 'bg-surface-container text-secondary'
+                          : 'bg-surface-container-high text-primary'
+                      }`}>
                         {item.turnoEtiqueta}
                       </span>
                     </td>
@@ -153,7 +159,7 @@ export const ScheduleSection: React.FC = () => {
                     <td className="py-space-md px-space-lg text-right">
                       <div className="flex items-center justify-end gap-2">
                         <a
-                          className="px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs uppercase tracking-wider font-bold hover:bg-secondary-container transition-all"
+                          className="px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs uppercase tracking-wider font-bold hover:bg-secondary-container transition-all whitespace-nowrap"
                           href={`https://wa.me/${VULPIARE_PHONE}?text=Hola%20Victoria,%20consulto%20cupo%20para%20${encodeURIComponent(item.consultarText)}`}
                           rel="noopener noreferrer"
                           target="_blank"
@@ -161,7 +167,7 @@ export const ScheduleSection: React.FC = () => {
                           Consultar Cupo
                         </a>
                         <a
-                          className="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-xs text-label-xs uppercase tracking-wider font-bold hover:bg-primary-container transition-all"
+                          className="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-xs text-label-xs uppercase tracking-wider font-bold hover:bg-primary-container transition-all whitespace-nowrap"
                           href={`https://wa.me/${VULPIARE_PHONE}?text=Hola%20Victoria,%20quiero%20agendar%20prueba%20para%20${encodeURIComponent(item.consultarText)}`}
                           rel="noopener noreferrer"
                           target="_blank"
@@ -185,7 +191,7 @@ export const ScheduleSection: React.FC = () => {
               className="p-4 rounded-2xl bg-surface-container-lowest shadow-[0_4px_16px_-2px_rgba(74,40,109,0.05)] flex flex-col gap-2 border border-surface-container"
             >
               <div className="flex items-center justify-between">
-                <span className="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-bold uppercase tracking-wider">
+                <span className="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-bold uppercase tracking-wider whitespace-nowrap">
                   {item.turnoEtiqueta}
                 </span>
                 <span className="font-label-xs text-label-xs text-outline">{item.cupo}</span>
@@ -197,7 +203,7 @@ export const ScheduleSection: React.FC = () => {
               <div className="flex items-center justify-between pt-1">
                 <span className="font-body-sm text-body-sm text-on-surface-variant">{item.dias}</span>
                 <a
-                  className="px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-xs text-label-xs font-semibold hover:bg-primary-container transition-colors"
+                  className="px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-xs text-label-xs font-semibold hover:bg-primary-container transition-colors whitespace-nowrap"
                   href={`https://wa.me/${VULPIARE_PHONE}?text=Hola%20Victoria,%20quiero%20agendar%20prueba%20para%20${encodeURIComponent(item.consultarText)}`}
                   rel="noopener noreferrer"
                   target="_blank"
