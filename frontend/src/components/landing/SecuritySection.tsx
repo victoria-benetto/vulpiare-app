@@ -13,11 +13,11 @@ export const SecuritySection: React.FC = () => {
             <div className="relative w-full min-h-[420px] sm:min-h-0 sm:aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl bg-surface-container border border-surface-container">
               <img
                 alt="Profesora Victoria guiando una postura segura en telas aéreas"
-                className="w-full h-full object-cover object-[50%_25%]"
+                className="w-full h-full object-cover object-[50%_80%]"
                 src={quoteBgImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent" />
-              <div className="absolute bottom-4 sm:bottom-8 left-3 sm:left-6 right-3 sm:right-6 p-3.5 sm:p-space-lg rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md shadow-xl text-center border border-surface-container">
+              <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 right-3 sm:right-6 p-3 sm:p-space-md rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md shadow-xl text-center border border-surface-container">
                 <img
                   alt="Logo Vulpiare"
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mx-auto mb-2 object-contain shadow-sm"
