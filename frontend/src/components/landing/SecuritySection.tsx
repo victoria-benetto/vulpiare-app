@@ -1,7 +1,6 @@
 import React from 'react';
-
-const VICTORIA_SECURITY_IMAGE = "https://lh3.googleusercontent.com/aida/AEtjO1VJ9UBcZvHDr-l4ioIHnKbsvYj-aPh-FLudUB0uyjSmlOP6zbXdtNok6nQ0D4texJnT0L-9CNaF0V09I80fbnJVPm3B5SIBc-2TWQtLGuwoCLiQFpLlL3UvNMmJlX_pxQl5A4D3YQaTBo-zYWyFAooqFBTQo2IaO4uO0CZ6-pLg53J5T_-9p5ftcVmX-Gop7IFVmEH6r3zk_rbWPiesNTzdtaD1wjXi4liUfZnZvNWCp0F2LRMJkNvuSZc";
-const QUOTE_LOGO_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuCBDvOKQ-sQemPJMoNNWlahe0MOoJ9xGTzlS7MBHohqRkdfiwLHcyjwsC44MGcyTNF1bU7sRiaNEkazRru7pRL1MsUVqyOklFKd64q3M0VUwXVlZLBc3QfjK89d9sBj0s_bZCc5GM-qvTKroK-ewrEyyyh7Vytwps7lV1-vMz6UrT52DazXYbOFcFktNe5LtiD8n-XWpagm7dhDjVLO42weOKw5w7xBFVmPMq7PWZ5zXm6N2oNku3i615eMbmbxsrZpIg";
+import victoriaStretchImg from '../../assets/images/victoria-stretch.jpg';
+import logoImg from '../../assets/images/logo.png';
 
 export const SecuritySection: React.FC = () => {
   return (
@@ -15,14 +14,14 @@ export const SecuritySection: React.FC = () => {
               <img
                 alt="Profesora Victoria guiando una postura segura en telas aéreas"
                 className="w-full h-full object-cover"
-                src={VICTORIA_SECURITY_IMAGE}
+                src={victoriaStretchImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent" />
               <div className="absolute bottom-8 left-6 right-6 p-space-lg rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md shadow-xl text-center border border-surface-container">
                 <img
                   alt="Logo Vulpiare"
                   className="w-12 h-12 rounded-full mx-auto mb-2 object-contain shadow-sm"
-                  src={QUOTE_LOGO_IMAGE}
+                  src={logoImg}
                 />
                 <p className="font-headline-sm text-headline-sm text-primary italic leading-snug">
                   “Estar en el aire transforma tu cuerpo: ganás fuerza real, flexibilidad y la libertad de volar con seguridad.”
@@ -48,14 +47,14 @@ export const SecuritySection: React.FC = () => {
               </p>
             </div>
 
-            {/* 4 Pilares Fundamentales */}
+            {/* 4 Pilares Fundamentales de Seguridad */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
               <div className="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-start gap-space-sm border border-surface-container">
                 <div className="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0">
                   <span className="material-symbols-outlined text-[20px]">groups</span>
                 </div>
                 <div>
-                  <h4 className="font-title-md text-title-md text-primary">15 a 18 Alumnas por Clase</h4>
+                  <h4 className="font-title-md text-title-md text-primary font-bold">15 a 18 Alumnas por Clase</h4>
                   <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
                     Cupos rigurosamente limitados para que Victoria y el equipo docente supervisen cada subida y cada armado.
                   </p>
@@ -67,9 +66,9 @@ export const SecuritySection: React.FC = () => {
                   <span className="material-symbols-outlined text-[20px]">verified_user</span>
                 </div>
                 <div>
-                  <h4 className="font-title-md text-title-md text-primary">Seguro de Accidentes Personales</h4>
+                  <h4 className="font-title-md text-title-md text-primary font-bold">Seguro de Accidentes Personales</h4>
                   <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-                    Cobertura exclusiva para acrobacias aéreas en cada clase, junto a colchonetas de alta densidad y anclajes periódicamente verificados.
+                    Cobertura médica y farmacéutica específica para acrobacias aéreas en cada clase, junto a colchonetas de alta densidad y anclajes certificados.
                   </p>
                 </div>
               </div>
@@ -79,7 +78,7 @@ export const SecuritySection: React.FC = () => {
                   <span className="material-symbols-outlined text-[20px]">fitness_center</span>
                 </div>
                 <div>
-                  <h4 className="font-title-md text-title-md text-primary">Fuerza &amp; Flexibilidad Consciente</h4>
+                  <h4 className="font-title-md text-title-md text-primary font-bold">Fuerza &amp; Flexibilidad Consciente</h4>
                   <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
                     Entrenamiento complementario de agarre, abdomen, hombros y elongación para prevenir lesiones.
                   </p>
@@ -91,7 +90,7 @@ export const SecuritySection: React.FC = () => {
                   <span className="material-symbols-outlined text-[20px]">psychology</span>
                 </div>
                 <div>
-                  <h4 className="font-title-md text-title-md text-primary">Confianza en el Aire</h4>
+                  <h4 className="font-title-md text-title-md text-primary font-bold">Confianza en el Aire</h4>
                   <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
                     Superamos miedos y vértigos con progresiones cerca del suelo antes de ganar altura.
                   </p>
@@ -114,13 +113,13 @@ export const SecuritySection: React.FC = () => {
               </div>
 
               <div className="p-space-lg rounded-3xl bg-surface shadow-sm flex flex-col justify-between border border-surface-container">
-                <div className="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0 mb-2">
-                  <span className="material-symbols-outlined text-[20px]">verified_user</span>
-                </div>
                 <div>
-                  <h4 className="font-title-md text-title-md text-primary">Seguro de Accidentes Personales</h4>
-                  <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-                    Cobertura exclusiva para acrobacias aéreas en cada clase, junto a colchonetas de alta densidad y anclajes periódicamente verificados.
+                  <div className="flex items-center gap-space-xs text-primary mb-space-xs">
+                    <span className="material-symbols-outlined text-[20px] text-secondary">visibility</span>
+                    <span className="font-label-md text-label-md uppercase tracking-wider font-bold">Nuestra Visión</span>
+                  </div>
+                  <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Consolidar en Mendoza un refugio de investigación corporal y expresión artística, donde el entrenamiento físico de alta precisión conviva en perfecta armonía con el disfrute y la comunidad.
                   </p>
                 </div>
               </div>
