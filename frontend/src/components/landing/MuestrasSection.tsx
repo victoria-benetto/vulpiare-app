@@ -1,10 +1,43 @@
 import React, { useState, useEffect } from 'react';
-import victoriaSplitImg from '../../assets/images/victoria-split.jpg';
-import adultSilksImg from '../../assets/images/adult-silks.png';
-import victoriaPoseImg from '../../assets/images/victoria-pose.jpg';
+
+// 2023 Photos
+import m2023_1 from '../../assets/images/muestras/2023/muestra-2023-1.jpg';
+import m2023_2 from '../../assets/images/muestras/2023/muestra-2023-2.jpg';
+import m2023_3 from '../../assets/images/muestras/2023/muestra-2023-3.jpg';
+import m2023_4 from '../../assets/images/muestras/2023/muestra-2023-4.jpg';
+import m2023_5 from '../../assets/images/muestras/2023/muestra-2023-5.jpg';
+import m2023_6 from '../../assets/images/muestras/2023/muestra-2023-6.jpg';
+import m2023_7 from '../../assets/images/muestras/2023/muestra-2023-7.jpg';
+import m2023_8 from '../../assets/images/muestras/2023/muestra-2023-8.jpg';
+import m2023_9 from '../../assets/images/muestras/2023/muestra-2023-9.jpg';
+import m2023_10 from '../../assets/images/muestras/2023/muestra-2023-10.jpg';
+
+// 2024 Photos
+import m2024_1 from '../../assets/images/muestras/2024/muestra-2024-1.jpg';
+import m2024_2 from '../../assets/images/muestras/2024/muestra-2024-2.jpg';
+import m2024_3 from '../../assets/images/muestras/2024/muestra-2024-3.jpg';
+import m2024_4 from '../../assets/images/muestras/2024/muestra-2024-4.jpg';
+import m2024_5 from '../../assets/images/muestras/2024/muestra-2024-5.jpg';
+import m2024_6 from '../../assets/images/muestras/2024/muestra-2024-6.jpg';
+import m2024_7 from '../../assets/images/muestras/2024/muestra-2024-7.jpg';
+import m2024_8 from '../../assets/images/muestras/2024/muestra-2024-8.jpg';
+import m2024_9 from '../../assets/images/muestras/2024/muestra-2024-9.jpg';
+import m2024_10 from '../../assets/images/muestras/2024/muestra-2024-10.jpg';
+
+// 2025 Photos
+import m2025_1 from '../../assets/images/muestras/2025/muestra-2025-1.jpg';
+import m2025_2 from '../../assets/images/muestras/2025/muestra-2025-2.jpg';
+import m2025_3 from '../../assets/images/muestras/2025/muestra-2025-3.jpg';
+import m2025_4 from '../../assets/images/muestras/2025/muestra-2025-4.jpg';
+import m2025_5 from '../../assets/images/muestras/2025/muestra-2025-5.jpg';
+import m2025_6 from '../../assets/images/muestras/2025/muestra-2025-6.jpg';
+import m2025_7 from '../../assets/images/muestras/2025/muestra-2025-7.jpg';
+import m2025_8 from '../../assets/images/muestras/2025/muestra-2025-8.jpg';
+import m2025_9 from '../../assets/images/muestras/2025/muestra-2025-9.jpg';
+import m2025_10 from '../../assets/images/muestras/2025/muestra-2025-10.jpg';
+
+// Fallback image for upcoming 2026
 import scheduleSilksImg from '../../assets/images/schedule-silks.png';
-import victoriaStretchImg from '../../assets/images/victoria-stretch.jpg';
-import kidsSilksImg from '../../assets/images/kids-silks.png';
 import heroAcrobatImg from '../../assets/images/hero-acrobat.png';
 
 interface MuestraData {
@@ -34,12 +67,18 @@ export const MuestrasSection: React.FC = () => {
       badgeType: 'Teatro',
       editionBadge: 'Edición 2023',
       description: 'Puesta en escena en sala teatral con iluminación artística, solos y dúos coreográficos en telas aéreas.',
-      coverImage: victoriaSplitImg,
+      coverImage: m2023_1,
       gallery: [
-        { src: victoriaSplitImg, caption: 'Victoria Benetto - Solo en Telas Aéreas (Edición 2023)' },
-        { src: adultSilksImg, caption: 'Apertura & Duos en Telas - Gala 2023' },
-        { src: victoriaPoseImg, caption: 'Figura Aérea - Puesta Escénica 2023' },
-        { src: kidsSilksImg, caption: 'Muestra Grupo Infantil & Juvenil 2023' },
+        { src: m2023_1, caption: 'Muestra 2023 · Solo en Telas Aéreas' },
+        { src: m2023_2, caption: 'Muestra 2023 · Figura en Suspensión' },
+        { src: m2023_3, caption: 'Muestra 2023 · Duos & Cuadros Colectivos' },
+        { src: m2023_4, caption: 'Muestra 2023 · Coreografía en Altura' },
+        { src: m2023_5, caption: 'Muestra 2023 · Apertura Teatral' },
+        { src: m2023_6, caption: 'Muestra 2023 · Figura en Nudo Escénico' },
+        { src: m2023_7, caption: 'Muestra 2023 · Expresión Corporal en Tela' },
+        { src: m2023_8, caption: 'Muestra 2023 · Secuencia Aérea' },
+        { src: m2023_9, caption: 'Muestra 2023 · Iluminación & Puesta en Escena' },
+        { src: m2023_10, caption: 'Muestra 2023 · Cierre de Gala Anual' },
       ],
     },
     {
@@ -49,12 +88,18 @@ export const MuestrasSection: React.FC = () => {
       badgeType: 'Teatro',
       editionBadge: 'Edición 2024',
       description: 'Presentación abierta para familias y comunidad en sala teatral con iluminación artística y figuras sincronizadas.',
-      coverImage: adultSilksImg,
+      coverImage: m2024_1,
       gallery: [
-        { src: adultSilksImg, caption: 'Dúo en Telas Aéreas (Edición 2024)' },
-        { src: scheduleSilksImg, caption: 'Secuencia de Vuelo & Apertura 2024' },
-        { src: victoriaStretchImg, caption: 'Flexibilidad Escénica - Muestra 2024' },
-        { src: heroAcrobatImg, caption: 'Puesta Teatral e Iluminación 2024' },
+        { src: m2024_1, caption: 'Muestra 2024 · Presentación Escénica en Tela' },
+        { src: m2024_2, caption: 'Muestra 2024 · Figura de Apertura y Vuelo' },
+        { src: m2024_3, caption: 'Muestra 2024 · Dúo Aéreo en Suspensión' },
+        { src: m2024_4, caption: 'Muestra 2024 · Flexibilidad y Fuerza' },
+        { src: m2024_5, caption: 'Muestra 2024 · Cuadro Coreográfico Sincronizado' },
+        { src: m2024_6, caption: 'Muestra 2024 · Técnica Aérea en Altura' },
+        { src: m2024_7, caption: 'Muestra 2024 · Solo en Telas Violetas' },
+        { src: m2024_8, caption: 'Muestra 2024 · Figura Invertida' },
+        { src: m2024_9, caption: 'Muestra 2024 · Puesta de Luces Teatral' },
+        { src: m2024_10, caption: 'Muestra 2024 · Despliegue Escénico Gala Anual' },
       ],
     },
     {
@@ -64,12 +109,18 @@ export const MuestrasSection: React.FC = () => {
       badgeType: 'Teatro',
       editionBadge: 'Edición 2025',
       description: 'Gala anual de cierre en sala teatral con solos, dúos y cuadros grupales en telas aéreas.',
-      coverImage: victoriaPoseImg,
+      coverImage: m2025_1,
       gallery: [
-        { src: victoriaPoseImg, caption: 'Pose Principal - Gala Anual 2025' },
-        { src: victoriaSplitImg, caption: 'Figura en Apertura - Muestra 2025' },
-        { src: adultSilksImg, caption: 'Grupos Adultos en Telas - Cierre 2025' },
-        { src: scheduleSilksImg, caption: 'Registro Fotográfico Escénico 2025' },
+        { src: m2025_1, caption: 'Muestra 2025 · Gala Anual de Cierre' },
+        { src: m2025_2, caption: 'Muestra 2025 · Pose Aérea en Altura' },
+        { src: m2025_3, caption: 'Muestra 2025 · Figura de Flexibilidad' },
+        { src: m2025_4, caption: 'Muestra 2025 · Cuadro Grupal en Escenario' },
+        { src: m2025_5, caption: 'Muestra 2025 · Solo Coreográfico' },
+        { src: m2025_6, caption: 'Muestra 2025 · Secuencia de Telas Aéreas' },
+        { src: m2025_7, caption: 'Muestra 2025 · Dúo Escénico Sincronizado' },
+        { src: m2025_8, caption: 'Muestra 2025 · Figura de Impacto y Vuelo' },
+        { src: m2025_9, caption: 'Muestra 2025 · Registro Fotográfico Teatral' },
+        { src: m2025_10, caption: 'Muestra 2025 · Cierre Escénico Vulpiare' },
       ],
     },
     {
@@ -217,7 +268,7 @@ export const MuestrasSection: React.FC = () => {
                     className="text-xs text-on-surface-variant hover:text-primary font-medium flex items-center gap-1 transition-colors"
                     onClick={() => handleOpenGallery(muestra)}
                   >
-                    <span>Registro Fotográfico</span>
+                    <span>Registro Fotográfico ({muestra.gallery.length})</span>
                     <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
                   </button>
                 </div>
