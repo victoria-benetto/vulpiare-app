@@ -50,18 +50,18 @@ export const ContactFormSection: React.FC = () => {
 
                 <div className="space-y-space-sm mt-space-lg">
                   {/* WhatsApp Victoria */}
-                  <div className="p-space-md rounded-2xl bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-between border border-surface-container">
-                    <div className="flex items-center gap-space-sm">
-                      <div className="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary">
+                  <div className="p-3.5 sm:p-space-md rounded-2xl bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-between gap-3 border border-surface-container">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0">
                         <span className="material-symbols-outlined text-[22px]">chat</span>
                       </div>
-                      <div>
-                        <span className="font-label-xs text-label-xs uppercase text-outline">WhatsApp Oficial · Victoria</span>
-                        <p className="font-title-md text-title-md text-primary font-bold">Mensaje Directo</p>
+                      <div className="min-w-0">
+                        <span className="text-[11px] sm:text-label-xs uppercase text-outline leading-tight block">WhatsApp Oficial · Victoria</span>
+                        <p className="text-sm sm:text-title-md text-primary font-bold truncate">Mensaje Directo</p>
                       </div>
                     </div>
                     <a
-                      className="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-xs text-label-xs uppercase tracking-wider font-bold hover:bg-primary-container transition-all"
+                      className="px-3.5 sm:px-space-md py-2 sm:py-space-xs rounded-full bg-primary text-on-primary font-label-xs text-[11px] sm:text-label-xs uppercase tracking-wider font-bold hover:bg-primary-container transition-all flex-shrink-0 whitespace-nowrap"
                       href={`https://wa.me/${VULPIARE_PHONE}`}
                       rel="noopener noreferrer"
                       target="_blank"
@@ -71,18 +71,18 @@ export const ContactFormSection: React.FC = () => {
                   </div>
 
                   {/* Ubicación Google Maps */}
-                  <div className="p-space-md rounded-2xl bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-between border border-surface-container">
-                    <div className="flex items-center gap-space-sm">
-                      <div className="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary">
+                  <div className="p-3.5 sm:p-space-md rounded-2xl bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-between gap-3 border border-surface-container">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0">
                         <span className="material-symbols-outlined text-[22px]">location_on</span>
                       </div>
-                      <div>
-                        <span className="font-label-xs text-label-xs uppercase text-outline">Ubicación</span>
-                        <p className="font-title-md text-title-md text-primary font-bold">Vulpiare en Google Maps</p>
+                      <div className="min-w-0">
+                        <span className="text-[11px] sm:text-label-xs uppercase text-outline leading-tight block">Ubicación</span>
+                        <p className="text-sm sm:text-title-md text-primary font-bold truncate">Vulpiare en Google Maps</p>
                       </div>
                     </div>
                     <a
-                      className="px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs uppercase tracking-wider font-bold hover:bg-secondary-container transition-all"
+                      className="px-3.5 sm:px-space-md py-2 sm:py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-[11px] sm:text-label-xs uppercase tracking-wider font-bold hover:bg-secondary-container transition-all flex-shrink-0 whitespace-nowrap"
                       href={GOOGLE_MAPS_LOCATION_URL}
                       rel="noopener noreferrer"
                       target="_blank"
@@ -92,18 +92,18 @@ export const ContactFormSection: React.FC = () => {
                   </div>
 
                   {/* Redes Sociales */}
-                  <div className="p-space-md rounded-2xl bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-between border border-surface-container">
-                    <div className="flex items-center gap-space-sm">
-                      <div className="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary">
+                  <div className="p-3.5 sm:p-space-md rounded-2xl bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-between gap-3 border border-surface-container">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0">
                         <span className="material-symbols-outlined text-[22px]">alternate_email</span>
                       </div>
-                      <div>
-                        <span className="font-label-xs text-label-xs uppercase text-outline">Instagram &amp; TikTok</span>
-                        <p className="font-title-md text-title-md text-primary font-bold">@vulpiare.acrotela</p>
+                      <div className="min-w-0">
+                        <span className="text-[11px] sm:text-label-xs uppercase text-outline leading-tight block">Instagram &amp; TikTok</span>
+                        <p className="text-sm sm:text-title-md text-primary font-bold truncate">@vulpiare.acrotela</p>
                       </div>
                     </div>
                     <a
-                      className="px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs uppercase tracking-wider font-bold hover:bg-secondary-container transition-all"
+                      className="px-3.5 sm:px-space-md py-2 sm:py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-[11px] sm:text-label-xs uppercase tracking-wider font-bold hover:bg-secondary-container transition-all flex-shrink-0 whitespace-nowrap"
                       href={INSTAGRAM_URL}
                       rel="noopener noreferrer"
                       target="_blank"

@@ -6,7 +6,7 @@ export const SocialSection: React.FC = () => {
   return (
     <section className="w-full py-space-2xl bg-surface">
       <div className="max-w-7xl mx-auto px-margin">
-        <div className="p-space-xl rounded-[2.5rem] bg-surface-container-lowest shadow-md border border-surface-container flex flex-col md:flex-row items-center justify-between gap-space-lg">
+        <div className="p-6 sm:p-space-xl rounded-3xl sm:rounded-[2.5rem] bg-surface-container-lowest shadow-md border border-surface-container flex flex-col md:flex-row items-center justify-between gap-space-lg">
           <div className="flex items-center gap-space-md text-center md:text-left flex-col md:flex-row">
             <img
               alt="Vulpiare Acrotela"
@@ -25,23 +25,23 @@ export const SocialSection: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-space-sm w-full md:w-auto">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2.5 sm:gap-space-sm w-full md:w-auto">
             <a
-              className="px-space-lg py-space-sm rounded-full bg-surface-container hover:bg-secondary-fixed text-primary font-label-md text-label-md uppercase tracking-wider font-bold transition-all flex items-center gap-2 border border-outline-variant"
+              className="w-full sm:w-auto px-4 sm:px-space-lg py-2.5 sm:py-space-sm rounded-full bg-surface-container hover:bg-secondary-fixed text-primary font-label-md text-[11px] sm:text-label-md uppercase tracking-wider font-bold transition-all flex items-center justify-center gap-2 border border-outline-variant whitespace-nowrap"
               href={INSTAGRAM_URL}
               rel="noopener noreferrer"
               target="_blank"
             >
-              <span className="material-symbols-outlined text-[20px]">photo_camera</span>
+              <span className="material-symbols-outlined text-[18px] sm:text-[20px]">photo_camera</span>
               <span>@vulpiare.acrotela en Instagram</span>
             </a>
             <a
-              className="px-space-lg py-space-sm rounded-full bg-surface-container hover:bg-secondary-fixed text-primary font-label-md text-label-md uppercase tracking-wider font-bold transition-all flex items-center gap-2 border border-outline-variant"
+              className="w-full sm:w-auto px-4 sm:px-space-lg py-2.5 sm:py-space-sm rounded-full bg-surface-container hover:bg-secondary-fixed text-primary font-label-md text-[11px] sm:text-label-md uppercase tracking-wider font-bold transition-all flex items-center justify-center gap-2 border border-outline-variant whitespace-nowrap"
               href={TIKTOK_URL}
               rel="noopener noreferrer"
               target="_blank"
             >
-              <span className="material-symbols-outlined text-[20px]">play_circle</span>
+              <span className="material-symbols-outlined text-[18px] sm:text-[20px]">play_circle</span>
               <span>@vulpiare.acrotela en TikTok</span>
             </a>
           </div>

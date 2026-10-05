@@ -45,9 +45,8 @@ export const LocationSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Columna Derecha: Tarjeta Instalaciones Seguras con Imagen de Fondo y opción única de Mapa */}
             <div className="lg:col-span-6 relative mt-6 lg:mt-0">
-              <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-surface-container-high flex flex-col justify-between p-space-lg group">
+              <div className="relative w-full min-h-[430px] lg:min-h-0 lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-surface-container-high flex flex-col justify-between p-4 sm:p-space-lg group">
                 {/* Imagen de fondo */}
                 <img
                   alt="Instalaciones Seguras Vulpiare"
@@ -72,7 +71,7 @@ export const LocationSection: React.FC = () => {
                 </div>
 
                 {/* Única Opción de Ir al Mapa */}
-                <div className="relative z-10 p-space-md rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md border border-surface-container shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <div className="relative z-10 p-3.5 sm:p-space-md rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md border border-surface-container shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                   <div>
                     <p className="font-title-md text-title-md text-primary font-bold flex items-center gap-1.5">
                       <span className="material-symbols-outlined text-secondary text-[20px]">map</span>
