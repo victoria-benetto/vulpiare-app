@@ -1,44 +1,28 @@
 import React, { useState, useEffect } from 'react';
 
-// 2023 Photos
-import m2023_1 from '../../assets/images/muestras/2023/muestra-2023-1.jpg';
-import m2023_2 from '../../assets/images/muestras/2023/muestra-2023-2.jpg';
-import m2023_3 from '../../assets/images/muestras/2023/muestra-2023-3.jpg';
-import m2023_4 from '../../assets/images/muestras/2023/muestra-2023-4.jpg';
-import m2023_5 from '../../assets/images/muestras/2023/muestra-2023-5.jpg';
-import m2023_6 from '../../assets/images/muestras/2023/muestra-2023-6.jpg';
-import m2023_7 from '../../assets/images/muestras/2023/muestra-2023-7.jpg';
-import m2023_8 from '../../assets/images/muestras/2023/muestra-2023-8.jpg';
-import m2023_9 from '../../assets/images/muestras/2023/muestra-2023-9.jpg';
-import m2023_10 from '../../assets/images/muestras/2023/muestra-2023-10.jpg';
-
-// 2024 Photos
-import m2024_1 from '../../assets/images/muestras/2024/muestra-2024-1.jpg';
-import m2024_2 from '../../assets/images/muestras/2024/muestra-2024-2.jpg';
-import m2024_3 from '../../assets/images/muestras/2024/muestra-2024-3.jpg';
-import m2024_4 from '../../assets/images/muestras/2024/muestra-2024-4.jpg';
-import m2024_5 from '../../assets/images/muestras/2024/muestra-2024-5.jpg';
-import m2024_6 from '../../assets/images/muestras/2024/muestra-2024-6.jpg';
-import m2024_7 from '../../assets/images/muestras/2024/muestra-2024-7.jpg';
-import m2024_8 from '../../assets/images/muestras/2024/muestra-2024-8.jpg';
-import m2024_9 from '../../assets/images/muestras/2024/muestra-2024-9.jpg';
-import m2024_10 from '../../assets/images/muestras/2024/muestra-2024-10.jpg';
-
-// 2025 Photos
-import m2025_1 from '../../assets/images/muestras/2025/muestra-2025-1.jpg';
-import m2025_2 from '../../assets/images/muestras/2025/muestra-2025-2.jpg';
-import m2025_3 from '../../assets/images/muestras/2025/muestra-2025-3.jpg';
-import m2025_4 from '../../assets/images/muestras/2025/muestra-2025-4.jpg';
-import m2025_5 from '../../assets/images/muestras/2025/muestra-2025-5.jpg';
-import m2025_6 from '../../assets/images/muestras/2025/muestra-2025-6.jpg';
-import m2025_7 from '../../assets/images/muestras/2025/muestra-2025-7.jpg';
-import m2025_8 from '../../assets/images/muestras/2025/muestra-2025-8.jpg';
-import m2025_9 from '../../assets/images/muestras/2025/muestra-2025-9.jpg';
-import m2025_10 from '../../assets/images/muestras/2025/muestra-2025-10.jpg';
-
-// Fallback image for upcoming 2026
+// Fallback images for upcoming 2026
 import scheduleSilksImg from '../../assets/images/schedule-silks.png';
 import heroAcrobatImg from '../../assets/images/hero-acrobat.png';
+
+// Load ALL photos from assets using Vite's import.meta.glob
+const glob2023 = import.meta.glob<{ default: string }>('../../assets/images/muestras/2023/*.jpg', { eager: true });
+const glob2024 = import.meta.glob<{ default: string }>('../../assets/images/muestras/2024/*.jpg', { eager: true });
+const glob2025 = import.meta.glob<{ default: string }>('../../assets/images/muestras/2025/*.jpg', { eager: true });
+
+const photos2023 = Object.values(glob2023).map((mod, i) => ({
+  src: mod.default,
+  caption: `Muestra 2023 · Teatro & Luces (${i + 1} de ${Object.keys(glob2023).length})`,
+}));
+
+const photos2024 = Object.values(glob2024).map((mod, i) => ({
+  src: mod.default,
+  caption: `Muestra 2024 · Gala Anual Vulpiare (${i + 1} de ${Object.keys(glob2024).length})`,
+}));
+
+const photos2025 = Object.values(glob2025).map((mod, i) => ({
+  src: mod.default,
+  caption: `Muestra 2025 · Gala Anual de Cierre (${i + 1} de ${Object.keys(glob2025).length})`,
+}));
 
 interface MuestraData {
   year: number;
@@ -67,19 +51,8 @@ export const MuestrasSection: React.FC = () => {
       badgeType: 'Teatro',
       editionBadge: 'Edición 2023',
       description: 'Puesta en escena en sala teatral con iluminación artística, solos y dúos coreográficos en telas aéreas.',
-      coverImage: m2023_1,
-      gallery: [
-        { src: m2023_1, caption: 'Muestra 2023 · Solo en Telas Aéreas' },
-        { src: m2023_2, caption: 'Muestra 2023 · Figura en Suspensión' },
-        { src: m2023_3, caption: 'Muestra 2023 · Duos & Cuadros Colectivos' },
-        { src: m2023_4, caption: 'Muestra 2023 · Coreografía en Altura' },
-        { src: m2023_5, caption: 'Muestra 2023 · Apertura Teatral' },
-        { src: m2023_6, caption: 'Muestra 2023 · Figura en Nudo Escénico' },
-        { src: m2023_7, caption: 'Muestra 2023 · Expresión Corporal en Tela' },
-        { src: m2023_8, caption: 'Muestra 2023 · Secuencia Aérea' },
-        { src: m2023_9, caption: 'Muestra 2023 · Iluminación & Puesta en Escena' },
-        { src: m2023_10, caption: 'Muestra 2023 · Cierre de Gala Anual' },
-      ],
+      coverImage: photos2023[0]?.src || scheduleSilksImg,
+      gallery: photos2023.length > 0 ? photos2023 : [{ src: scheduleSilksImg, caption: 'Muestra 2023' }],
     },
     {
       year: 2024,
@@ -88,19 +61,8 @@ export const MuestrasSection: React.FC = () => {
       badgeType: 'Teatro',
       editionBadge: 'Edición 2024',
       description: 'Presentación abierta para familias y comunidad en sala teatral con iluminación artística y figuras sincronizadas.',
-      coverImage: m2024_1,
-      gallery: [
-        { src: m2024_1, caption: 'Muestra 2024 · Presentación Escénica en Tela' },
-        { src: m2024_2, caption: 'Muestra 2024 · Figura de Apertura y Vuelo' },
-        { src: m2024_3, caption: 'Muestra 2024 · Dúo Aéreo en Suspensión' },
-        { src: m2024_4, caption: 'Muestra 2024 · Flexibilidad y Fuerza' },
-        { src: m2024_5, caption: 'Muestra 2024 · Cuadro Coreográfico Sincronizado' },
-        { src: m2024_6, caption: 'Muestra 2024 · Técnica Aérea en Altura' },
-        { src: m2024_7, caption: 'Muestra 2024 · Solo en Telas Violetas' },
-        { src: m2024_8, caption: 'Muestra 2024 · Figura Invertida' },
-        { src: m2024_9, caption: 'Muestra 2024 · Puesta de Luces Teatral' },
-        { src: m2024_10, caption: 'Muestra 2024 · Despliegue Escénico Gala Anual' },
-      ],
+      coverImage: photos2024[0]?.src || scheduleSilksImg,
+      gallery: photos2024.length > 0 ? photos2024 : [{ src: scheduleSilksImg, caption: 'Muestra 2024' }],
     },
     {
       year: 2025,
@@ -109,19 +71,8 @@ export const MuestrasSection: React.FC = () => {
       badgeType: 'Teatro',
       editionBadge: 'Edición 2025',
       description: 'Gala anual de cierre en sala teatral con solos, dúos y cuadros grupales en telas aéreas.',
-      coverImage: m2025_1,
-      gallery: [
-        { src: m2025_1, caption: 'Muestra 2025 · Gala Anual de Cierre' },
-        { src: m2025_2, caption: 'Muestra 2025 · Pose Aérea en Altura' },
-        { src: m2025_3, caption: 'Muestra 2025 · Figura de Flexibilidad' },
-        { src: m2025_4, caption: 'Muestra 2025 · Cuadro Grupal en Escenario' },
-        { src: m2025_5, caption: 'Muestra 2025 · Solo Coreográfico' },
-        { src: m2025_6, caption: 'Muestra 2025 · Secuencia de Telas Aéreas' },
-        { src: m2025_7, caption: 'Muestra 2025 · Dúo Escénico Sincronizado' },
-        { src: m2025_8, caption: 'Muestra 2025 · Figura de Impacto y Vuelo' },
-        { src: m2025_9, caption: 'Muestra 2025 · Registro Fotográfico Teatral' },
-        { src: m2025_10, caption: 'Muestra 2025 · Cierre Escénico Vulpiare' },
-      ],
+      coverImage: photos2025[0]?.src || scheduleSilksImg,
+      gallery: photos2025.length > 0 ? photos2025 : [{ src: scheduleSilksImg, caption: 'Muestra 2025' }],
     },
     {
       year: 2026,
@@ -302,7 +253,7 @@ export const MuestrasSection: React.FC = () => {
                   <p className="text-xs text-on-surface-variant">
                     {selectedMuestra.isUpcoming
                       ? 'Registro Fotográfico Próximamente · Muestras Vulpiare'
-                      : 'Registro Fotográfico · Gala Anual Vulpiare'}
+                      : `Registro Fotográfico (${selectedMuestra.gallery.length} fotos) · Gala Anual Vulpiare`}
                   </p>
                 </div>
               </div>
@@ -318,9 +269,9 @@ export const MuestrasSection: React.FC = () => {
             {/* Modal Main Viewfinder */}
             <div className="relative flex-1 bg-black/90 flex items-center justify-center min-h-[320px] sm:min-h-[420px] overflow-hidden group/viewer">
               <img
-                alt={selectedMuestra.gallery[activePhotoIndex].caption}
+                alt={selectedMuestra.gallery[activePhotoIndex]?.caption || selectedMuestra.title}
                 className="max-h-[60vh] max-w-full object-contain select-none transition-all duration-300"
-                src={selectedMuestra.gallery[activePhotoIndex].src}
+                src={selectedMuestra.gallery[activePhotoIndex]?.src}
               />
 
               {/* Prev/Next Buttons */}
@@ -352,11 +303,11 @@ export const MuestrasSection: React.FC = () => {
             {/* Modal Footer & Thumbnails */}
             <div className="p-4 sm:p-5 bg-surface-container-lowest border-t border-surface-container flex flex-col gap-3">
               <p className="font-body-md text-body-md text-primary text-center sm:text-left font-medium">
-                {selectedMuestra.gallery[activePhotoIndex].caption}
+                {selectedMuestra.gallery[activePhotoIndex]?.caption}
               </p>
 
               {/* Thumbnails Row */}
-              <div className="flex items-center gap-3 overflow-x-auto pb-1 pt-1 scrollbar-none">
+              <div className="flex items-center gap-2.5 overflow-x-auto pb-1 pt-1 scrollbar-none">
                 {selectedMuestra.gallery.map((photo, idx) => (
                   <button
                     key={idx}
