@@ -11,10 +11,10 @@ export const HeroSection: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-margin">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
-          {/* Columna Texto Hero */}
-          <div className="lg:col-span-6 flex flex-col items-start gap-space-md z-10">
+          {/* Encabezado y Texto Hero (Móvil #1, Desktop Arriba-Izquierda) */}
+          <div className="lg:col-span-6 lg:col-start-1 lg:row-start-1 flex flex-col items-start gap-space-md z-10">
             <div className="inline-flex items-center gap-space-xs px-3 sm:px-space-md py-1 sm:py-space-xs rounded-full bg-surface-container-highest text-primary shadow-sm border border-secondary/20">
-              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse flex-shrink-0" />
+              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse shrink-0" />
               <span className="font-label-xs text-[10px] sm:text-label-xs uppercase tracking-widest text-primary font-bold">
                 Acrobacias Aéreas en Tela · Profesora Victoria
               </span>
@@ -30,10 +30,51 @@ export const HeroSection: React.FC = () => {
 
             {/* Pill de no se necesita experiencia */}
             <div className="inline-flex items-center gap-space-xs px-3 sm:px-space-md py-2.5 sm:py-space-xs rounded-2xl bg-secondary-fixed/70 border border-secondary-fixed-dim text-on-secondary-fixed">
-              <span className="material-symbols-outlined text-secondary text-[18px] sm:text-[20px] flex-shrink-0">stars</span>
+              <span className="material-symbols-outlined text-secondary text-[18px] sm:text-[20px] shrink-0">stars</span>
               <span className="font-title-md text-xs sm:text-[14px] font-bold leading-snug">¡No se necesita experiencia previa, es para todos los niveles!</span>
             </div>
+          </div>
 
+          {/* Columna Visual Hero Media (Móvil #2 - entre texto y botones, Desktop Derecha) */}
+          <div className="lg:col-span-6 lg:col-start-7 lg:row-start-1 lg:row-span-2 relative flex justify-center items-center my-2 lg:my-0">
+            <div className="relative w-full min-h-[420px] sm:min-h-0 sm:aspect-[4/5] max-w-lg rounded-3xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl bg-surface-container border border-surface-container-highest">
+              <img
+                alt="Acróbata en tela aérea en Vulpiare realizando figura en apertura con telas violetas - María Victoria Benetto"
+                className="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-700 ease-out"
+                src={victoriaPoseImg}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
+              
+              {/* Floating Badge Top Right */}
+              <div className="absolute top-4 sm:top-6 right-4 sm:right-6 px-3 sm:px-space-md py-1 sm:py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center gap-space-xs border border-surface-container">
+                <span className="material-symbols-outlined text-secondary text-[16px]">verified</span>
+                <span className="font-label-xs text-[10px] sm:text-label-xs text-primary uppercase font-bold tracking-wider">
+                  Ciclo Activo 2026
+                </span>
+              </div>
+
+              {/* Floating Pill Bottom Left */}
+              <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 right-3 sm:right-6 p-3 sm:p-space-md rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md shadow-xl flex items-center justify-between gap-2 border border-surface-container">
+                <div className="flex items-center gap-2.5 sm:gap-space-sm min-w-0">
+                  <img
+                    alt="Isotipo Vulpiare"
+                    className="w-9 h-9 sm:w-11 sm:h-11 rounded-full object-contain border border-surface-container-highest shrink-0"
+                    src={logoImg}
+                  />
+                  <div className="min-w-0">
+                    <h4 className="font-title-md text-xs sm:text-title-md text-primary leading-tight font-bold truncate">Seguridad &amp; Técnica Aérea</h4>
+                    <p className="font-body-sm text-[11px] sm:text-body-sm text-on-surface-variant truncate">Colchones de impacto y telas de alta resistencia</p>
+                  </div>
+                </div>
+                <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary shrink-0">
+                  <span className="material-symbols-outlined text-[18px]">verified_user</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Botones CTA y Métricas (Móvil #3, Desktop Abajo-Izquierda) */}
+          <div className="lg:col-span-6 lg:col-start-1 lg:row-start-2 flex flex-col items-start gap-space-md z-10">
             {/* Botones CTA Hero */}
             <div className="flex flex-wrap items-center gap-space-sm pt-space-xs w-full sm:w-auto">
               <a
@@ -57,7 +98,7 @@ export const HeroSection: React.FC = () => {
             {/* Métricas y Badges de Seguridad / Cupos */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-space-md pt-space-lg w-full max-w-2xl border-t border-surface-container-high">
               <div className="flex items-start gap-space-xs">
-                <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary shrink-0 mt-0.5">
                   <span className="material-symbols-outlined text-[18px]">groups</span>
                 </div>
                 <div className="flex flex-col">
@@ -68,7 +109,7 @@ export const HeroSection: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-start gap-space-xs">
-                <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary shrink-0 mt-0.5">
                   <span className="material-symbols-outlined text-[18px]">fitness_center</span>
                 </div>
                 <div className="flex flex-col">
@@ -79,7 +120,7 @@ export const HeroSection: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-start gap-space-xs">
-                <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary shrink-0 mt-0.5">
                   <span className="material-symbols-outlined text-[18px]">verified_user</span>
                 </div>
                 <div className="flex flex-col">
@@ -87,44 +128,6 @@ export const HeroSection: React.FC = () => {
                   <span className="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">
                     Accidentes personales exclusivo acrobacias en tela
                   </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Columna Visual Hero Media */}
-          <div className="lg:col-span-6 relative flex justify-center items-center mt-6 lg:mt-0">
-            <div className="relative w-full min-h-[420px] sm:min-h-0 sm:aspect-[4/5] max-w-lg rounded-3xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl bg-surface-container border border-surface-container-highest">
-              <img
-                alt="Acróbata en tela aérea en Vulpiare realizando figura en apertura con telas violetas - María Victoria Benetto"
-                className="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-700 ease-out"
-                src={victoriaPoseImg}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
-              
-              {/* Floating Badge Top Right */}
-              <div className="absolute top-4 sm:top-6 right-4 sm:right-6 px-3 sm:px-space-md py-1 sm:py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center gap-space-xs border border-surface-container">
-                <span className="material-symbols-outlined text-secondary text-[16px]">verified</span>
-                <span className="font-label-xs text-[10px] sm:text-label-xs text-primary uppercase font-bold tracking-wider">
-                  Ciclo Activo 2026
-                </span>
-              </div>
-
-              {/* Floating Pill Bottom Left */}
-              <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 right-3 sm:right-6 p-3 sm:p-space-md rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md shadow-xl flex items-center justify-between gap-2 border border-surface-container">
-                <div className="flex items-center gap-2.5 sm:gap-space-sm min-w-0">
-                  <img
-                    alt="Isotipo Vulpiare"
-                    className="w-9 h-9 sm:w-11 sm:h-11 rounded-full object-contain border border-surface-container-highest flex-shrink-0"
-                    src={logoImg}
-                  />
-                  <div className="min-w-0">
-                    <h4 className="font-title-md text-xs sm:text-title-md text-primary leading-tight font-bold truncate">Seguridad &amp; Técnica Aérea</h4>
-                    <p className="font-body-sm text-[11px] sm:text-body-sm text-on-surface-variant truncate">Colchones de impacto y telas de alta resistencia</p>
-                  </div>
-                </div>
-                <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0">
-                  <span className="material-symbols-outlined text-[18px]">verified_user</span>
                 </div>
               </div>
             </div>
