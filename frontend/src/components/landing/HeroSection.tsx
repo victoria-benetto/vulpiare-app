@@ -1,46 +1,140 @@
 import React from 'react';
-import victoriaPoseImg from '../../assets/images/victoria-pose.jpg';
+import { VULPIARE_PHONE } from '../../constants/config';
+
+const HERO_MAIN_IMAGE = "https://lh3.googleusercontent.com/aida/AEtjO1VJ9UBcZvHDr-l4ioIHnKbsvYj-aPh-FLudUB0uyjSmlOP6zbXdtNok6nQ0D4texJnT0L-9CNaF0V09I80fbnJVPm3B5SIBc-2TWQtLGuwoCLiQFpLlL3UvNMmJlX_pxQl5A4D3YQaTBo-zYWyFAooqFBTQo2IaO4uO0CZ6-pLg53J5T_-9p5ftcVmX-Gop7IFVmEH6r3zk_rbWPiesNTzdtaD1wjXi4liUfZnZvNWCp0F2LRMJkNvuSZc";
+const HERO_ISOTIPO_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuALPPByfd_2fGGJfXPbIeK5eJRZcV77_cVTGJhgjfYReIepGfB2PkjfSpZuqOm_8s-bpa9L-BwkOmZwMibdBIQYI1OVCs9eg73mY5UiAwa9TEn8mAaKjBgY-_zWd2HoRPX4EA36hiyfgA0Z8VDv7P4nOzWXGvUPACEoE1kFKQGJUfDcxLD85Fj3h7_7cDW7w7bbHjO1ip36JdgidKpLHlThLhmSoII-shKzi_hvr50H7yGS67taqegq0FQGYmW56bQrtA";
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative overflow-hidden py-16 md:py-24">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2 md:gap-10 md:px-10">
-        <div className="flex flex-col items-center text-center md:items-start md:text-left">
-          <span className="mb-3 rounded-full bg-vulpiare-light px-4 py-1 text-xs font-bold uppercase tracking-wider text-vulpiare-dark">
-            Academia de Acrobacias Aéreas
-          </span>
-          <h1 className="font-serif text-4xl font-extrabold leading-tight text-vulpiare-dark sm:text-5xl md:text-6xl">
-            <span className="text-vulpiare-dark/90 underline decoration-vulpiare-medium decoration-wavy decoration-2">
-              Desplegá tus alas.
-            </span>
-          </h1>
-          <p className="mt-6 max-w-md font-serif text-lg leading-relaxed text-gray-600 sm:text-xl">
-            Descubrí tu fuerza, flexibilidad y gracia en Vulpiare. Clases de acrobacia en tela para todas las edades y niveles.
-          </p>
-          <div className="mt-8 flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
-            <a
-              href="#horarios"
-              className="inline-flex items-center justify-center rounded-full bg-vulpiare-dark px-8 py-3.5 text-base font-semibold text-white shadow-lg transition-all hover:bg-vulpiare-dark/90 hover:shadow-xl active:scale-95"
-            >
-              Quiero mi clase de prueba
-            </a>
-            <a
-              href="#horarios"
-              className="inline-flex items-center justify-center rounded-full border-2 border-vulpiare-dark/30 bg-transparent px-8 py-3.5 text-base font-semibold text-vulpiare-dark transition-all hover:border-vulpiare-dark hover:bg-vulpiare-light/40"
-            >
-              Ver Horarios
-            </a>
-          </div>
-        </div>
+    <section className="relative w-full pt-space-xl pb-space-3xl overflow-hidden bg-gradient-to-b from-surface via-surface-container-low to-surface scroll-mt-20" id="inicio">
+      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[820px] h-[520px] bg-secondary-container/20 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/3 -right-24 w-96 h-96 bg-primary-fixed/25 rounded-full blur-2xl pointer-events-none -z-10" />
+      
+      <div className="max-w-7xl mx-auto px-margin">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+          {/* Columna Texto Hero */}
+          <div className="lg:col-span-6 flex flex-col items-start gap-space-md z-10">
+            <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-highest text-primary shadow-sm border border-secondary/20">
+              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+              <span className="font-label-xs text-label-xs uppercase tracking-widest text-primary font-bold">
+                Acrobacias Aéreas en Tela · Profesora Victoria
+              </span>
+            </div>
 
-        {/* Imagen Principal Hero (Foto Oficial de María Victoria Benetto) */}
-        <div className="relative flex items-center justify-center rounded-3xl bg-gradient-to-br from-vulpiare-light via-vulpiare-medium/40 to-transparent p-6 md:p-8 shadow-xl">
-          <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl shadow-md border-2 border-white">
-            <img
-              src={victoriaPoseImg}
-              alt="María Victoria Benetto ejecutando una pose acrobática sobre telas rojas"
-              className="h-full w-full object-cover"
-            />
+            <h1 className="font-display-hero text-display-hero text-primary tracking-tight leading-tight">
+              El arte de volar, <span className="italic font-normal text-secondary">fuerza</span> y expresión en tela
+            </h1>
+
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+              Academia de acrobacias aéreas en tela para todas las edades dirigida por Victoria. Descubrí el placer de estar en el aire, ganar fuerza, flexibilidad y confianza corporal en un espacio cálido y profesional.
+            </p>
+
+            {/* Pill de no se necesita experiencia */}
+            <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-2xl bg-secondary-fixed/70 border border-secondary-fixed-dim text-on-secondary-fixed">
+              <span className="material-symbols-outlined text-secondary text-[20px]">stars</span>
+              <span className="font-title-md text-[14px] font-bold">¡No se necesita experiencia previa, es para todos los niveles!</span>
+            </div>
+
+            {/* Botones CTA Hero */}
+            <div className="flex flex-wrap items-center gap-space-sm pt-space-xs w-full sm:w-auto">
+              <a
+                className="px-space-xl py-space-md rounded-full bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-wider shadow-lg hover:bg-primary-container hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-space-xs w-full sm:w-auto"
+                href={`https://wa.me/${VULPIARE_PHONE}`}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span className="material-symbols-outlined text-[18px]">calendar_month</span>
+                <span>Agendar clase con Victoria</span>
+              </a>
+              <a
+                className="px-space-lg py-space-md rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg uppercase tracking-wider shadow-sm hover:bg-surface-container hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-space-xs border border-outline-variant w-full sm:w-auto"
+                href="#horarios"
+              >
+                <span>Ver Grilla de Horarios</span>
+                <span className="material-symbols-outlined text-[18px] text-secondary">arrow_downward</span>
+              </a>
+            </div>
+
+            {/* Métricas y Badges de Seguridad / Cupos */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-lg w-full max-w-2xl border-t border-surface-container-high">
+              <div className="flex items-start gap-space-xs">
+                <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                  <span className="material-symbols-outlined text-[18px]">groups</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-title-md text-primary font-bold leading-tight">15 a 18</span>
+                  <span className="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">
+                    Personas por clase · Grupos reducidos
+                  </span>
+                </div>
+              </div>
+              <div className="flex items-start gap-space-xs">
+                <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                  <span className="material-symbols-outlined text-[18px]">fitness_center</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-title-md text-primary font-bold leading-tight">Todos los Niveles</span>
+                  <span className="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">
+                    Desde cero hasta avanzados
+                  </span>
+                </div>
+              </div>
+              <div className="flex items-start gap-space-xs">
+                <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                  <span className="material-symbols-outlined text-[18px]">verified_user</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-title-md text-primary font-bold leading-tight">Seguro Incluido</span>
+                  <span className="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">
+                    Accidentes personales exclusivo acrobacias en tela
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Columna Visual Hero Media */}
+          <div className="lg:col-span-6 relative flex justify-center items-center">
+            <div className="relative w-full aspect-[4/5] max-w-lg rounded-[2.5rem] overflow-hidden shadow-2xl bg-surface-container border border-surface-container-highest">
+              <img
+                alt="Acróbata en tela aérea en Vulpiare realizando figura en apertura con telas violetas"
+                className="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-700 ease-out"
+                src={HERO_MAIN_IMAGE}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
+              
+              {/* Floating Badge Top Right */}
+              <div className="absolute top-6 right-6 px-space-md py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center gap-space-xs border border-surface-container">
+                <span className="material-symbols-outlined text-secondary text-[16px]">verified</span>
+                <span className="font-label-xs text-label-xs text-primary uppercase font-bold tracking-wider">
+                  Ciclo Activo 2025
+                </span>
+              </div>
+
+              {/* Floating Pill Bottom Left */}
+              <div className="absolute bottom-6 left-6 right-6 p-space-md rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md shadow-xl flex items-center justify-between border border-surface-container">
+                <div className="flex items-center gap-space-sm">
+                  <img
+                    alt="Isotipo Vulpiare"
+                    className="w-11 h-11 rounded-full object-contain border border-surface-container-highest"
+                    src={HERO_ISOTIPO_IMAGE}
+                  />
+                  <div>
+                    <h4 className="font-title-md text-title-md text-primary leading-tight">Seguridad &amp; Técnica Aérea</h4>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">Colchones de impacto y telas de alta resistencia</p>
+                  </div>
+                </div>
+                <a
+                  className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary hover:bg-secondary hover:text-on-secondary transition-colors"
+                  href={`https://wa.me/${VULPIARE_PHONE}`}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Consultar a Victoria"
+                >
+                  <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

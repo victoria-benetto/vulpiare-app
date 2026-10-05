@@ -1,33 +1,27 @@
 import React from 'react';
-import { MessageCircle } from 'lucide-react';
-import { FloatingWhatsAppButtonProps } from '../../types/components';
-import { VULPIARE_PHONE, DEFAULT_WHATSAPP_MESSAGE } from '../../constants/config';
+import { VULPIARE_PHONE } from '../../constants/config';
 
-export const FloatingWhatsAppButton: React.FC<FloatingWhatsAppButtonProps> = ({
-  // =========================================================================
-  // NOTA TECH LEAD / DESARROLLADOR:
-  // Para cambiar el número de WhatsApp, podés editar la constante VULPIARE_PHONE 
-  // en el archivo `src/constants/config.ts` o pasar la prop `phone`.
-  // Formato: "5491123456789" (Código de país + área + número sin símbolos ni espacios)
-  // =========================================================================
-  phone = VULPIARE_PHONE,
-  defaultMessage = DEFAULT_WHATSAPP_MESSAGE,
-  ariaLabel = "Contactar a Victoria por WhatsApp",
-}) => {
-  const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(defaultMessage)}`;
+export const FloatingWhatsAppButton: React.FC = () => {
+  const whatsappUrl = `https://wa.me/${VULPIARE_PHONE}?text=Hola%20Victoria,%20quisiera%20consultar%20por%20las%20clases%20de%20acrobacias%20a%C3%A9reas%20en%20tela%20en%20Vulpiare`;
 
   return (
-    <a
-      href={whatsappUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={ariaLabel}
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-[#25D366] px-4 py-3 text-white shadow-xl transition-all duration-300 hover:scale-105 hover:bg-[#20ba5a] active:scale-95 group"
-    >
-      <MessageCircle className="h-7 w-7 fill-white text-[#25D366] transition-transform group-hover:rotate-12" />
-      <span className="hidden text-sm font-semibold sm:inline-block">
-        ¡Hablá con Victoria!
-      </span>
-    </a>
+    <aside className="fixed bottom-24 right-5 xl:bottom-space-lg xl:right-space-lg z-40 flex items-center group">
+      <div className="mr-space-sm hidden sm:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-lowest text-on-surface shadow-[0_8px_24px_-4px_rgba(74,40,109,0.18)] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-surface-container">
+        <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+        <span className="font-label-md text-label-md text-on-surface-variant">
+          Chateá con Victoria (+54 9 261 668-8994)
+        </span>
+      </div>
+      <a
+        aria-label="WhatsApp Victoria Vulpiare"
+        className="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-[0_12px_28px_-4px_rgba(74,40,109,0.30)] hover:scale-105 active:scale-95 transition-transform relative"
+        href={whatsappUrl}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span className="material-symbols-outlined text-[28px]">chat</span>
+        <span className="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-[#1EBE5D] ring-2 ring-surface" />
+      </a>
+    </aside>
   );
 };

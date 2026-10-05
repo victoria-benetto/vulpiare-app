@@ -3,7 +3,36 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-[#E9D4EF]/20 text-gray-800 antialiased font-sans;
+  html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #fff7fd;
+    color: #23162c;
   }
+  body {
+    overscroll-behavior-y: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Hide scrollbar for clean UI where needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
