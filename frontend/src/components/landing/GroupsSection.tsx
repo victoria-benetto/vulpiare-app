@@ -89,10 +89,10 @@ export const GroupsSection: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
               <div className="absolute top-4 left-4 right-4 flex items-start justify-between gap-2 z-10">
-                <span className="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-xs text-[11px] sm:text-label-xs uppercase font-bold tracking-wider">
-                  Grupo Jóvenes / Adultos
+                <span className="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-xs text-[10px] sm:text-label-xs uppercase font-bold tracking-wider whitespace-nowrap shrink-0">
+                  Jóvenes / Adultos
                 </span>
-                <span className="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-xs text-[10px] sm:text-label-xs uppercase font-bold tracking-wider shadow-md shrink-0">
+                <span className="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-xs text-[10px] sm:text-label-xs uppercase font-bold tracking-wider shadow-md shrink-0 whitespace-nowrap">
                   Doble Turno
                 </span>
               </div>

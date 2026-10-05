@@ -131,15 +131,6 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
             </div>
           </a>
           <div className="flex items-center gap-1 shrink-0">
-            <a
-              aria-label="WhatsApp Victoria"
-              className="w-11 h-11 flex items-center justify-center rounded-full text-[#1EBE5D] hover:bg-surface-container-low transition-colors"
-              href={`https://wa.me/${VULPIARE_PHONE}?text=Hola%20Victoria,%20quisiera%20consultar%20por%20las%20clases%20de%20acrobacias%20a%C3%A9reas%20en%20tela%20en%20Vulpiare`}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <span className="material-symbols-outlined text-[22px]">chat</span>
-            </a>
             <button
               aria-label="Abrir Menú"
               className="w-11 h-11 flex items-center justify-center rounded-full text-primary hover:bg-surface-container-low transition-colors"

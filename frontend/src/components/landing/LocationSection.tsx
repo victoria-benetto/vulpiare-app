@@ -5,9 +5,9 @@ import victoriaStretchImg from '../../assets/images/victoria-stretch.jpg';
 export const LocationSection: React.FC = () => {
   return (
     <section className="w-full py-space-3xl bg-surface scroll-mt-20" id="ubicacion">
-      <div className="max-w-7xl mx-auto px-margin">
-        <div className="rounded-3xl bg-surface-container-low border border-surface-container-high p-space-xl lg:p-space-2xl shadow-sm">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+      <div className="max-w-7xl mx-auto px-3 sm:px-margin">
+        <div className="rounded-3xl bg-surface-container-low border border-surface-container-high p-3.5 sm:p-space-xl lg:p-space-2xl shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-space-xl items-center">
             {/* Columna Izquierda: Información de la Sede & WhatsApp */}
             <div className="lg:col-span-6 flex flex-col items-start gap-space-sm">
               <span className="font-label-xs text-label-xs uppercase tracking-widest text-secondary font-bold">
@@ -22,7 +22,7 @@ export const LocationSection: React.FC = () => {
 
               <div className="mt-space-xs space-y-3 w-full">
                 <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-surface-container-lowest border border-surface-container">
-                  <div className="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary shrink-0">
                     <span className="material-symbols-outlined text-[22px]">location_on</span>
                   </div>
                   <div>
@@ -34,7 +34,7 @@ export const LocationSection: React.FC = () => {
 
               <div className="pt-space-sm flex flex-wrap items-center gap-space-sm w-full">
                 <a
-                  className="px-space-lg py-space-md rounded-full bg-surface-container text-primary font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-container-high transition-all flex items-center justify-center gap-space-xs border border-outline-variant w-full sm:w-auto text-center"
+                  className="px-4 py-3 rounded-full bg-surface-container text-primary font-label-md text-xs sm:text-label-md uppercase tracking-wider hover:bg-surface-container-high transition-all flex items-center justify-center gap-2 border border-outline-variant w-full sm:w-auto text-center font-bold"
                   href={`https://wa.me/${VULPIARE_PHONE}?text=Hola%20Victoria,%20quisiera%20consultar%20c%C3%B3mo%20llegar%20al%20estudio`}
                   rel="noopener noreferrer"
                   target="_blank"
@@ -46,7 +46,7 @@ export const LocationSection: React.FC = () => {
             </div>
 
             <div className="lg:col-span-6 relative mt-6 lg:mt-0">
-              <div className="relative w-full min-h-[490px] sm:min-h-[440px] lg:min-h-0 lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-surface-container-high flex flex-col justify-between p-4 sm:p-space-lg group">
+              <div className="relative w-full min-h-[470px] sm:min-h-[440px] lg:min-h-0 lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-surface-container-high flex flex-col justify-between p-4 sm:p-space-lg group">
                 {/* Imagen de fondo */}
                 <img
                   alt="Instalaciones Seguras Vulpiare"
