@@ -1,5 +1,5 @@
 import React from 'react';
-import victoriaStretchImg from '../../assets/images/victoria-stretch.jpg';
+import quoteBgImg from '../../assets/images/quote-bg.jpg';
 import logoImg from '../../assets/images/logo.png';
 
 export const SecuritySection: React.FC = () => {
@@ -14,7 +14,7 @@ export const SecuritySection: React.FC = () => {
               <img
                 alt="Profesora Victoria guiando una postura segura en telas aéreas"
                 className="w-full h-full object-cover"
-                src={victoriaStretchImg}
+                src={quoteBgImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent" />
               <div className="absolute bottom-4 sm:bottom-8 left-3 sm:left-6 right-3 sm:right-6 p-3.5 sm:p-space-lg rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md shadow-xl text-center border border-surface-container">
