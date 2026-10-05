@@ -123,15 +123,9 @@ export const HeroSection: React.FC = () => {
                     <p className="font-body-sm text-body-sm text-on-surface-variant">Colchones de impacto y telas de alta resistencia</p>
                   </div>
                 </div>
-                <a
-                  className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary hover:bg-secondary hover:text-on-secondary transition-colors"
-                  href={`https://wa.me/${VULPIARE_PHONE}`}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultar a Victoria"
-                >
-                  <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                </a>
+                <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0">
+                  <span className="material-symbols-outlined text-[18px]">verified_user</span>
+                </div>
               </div>
             </div>
           </div>

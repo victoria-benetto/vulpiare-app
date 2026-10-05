@@ -229,7 +229,7 @@ export const ScheduleSection: React.FC = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span>Consultar a Victoria (+54 9 261 668-8994)</span>
+            <span>Consultar a Victoria por WhatsApp</span>
             <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
           </a>
         </div>

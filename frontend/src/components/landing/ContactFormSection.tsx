@@ -57,7 +57,7 @@ export const ContactFormSection: React.FC = () => {
                       </div>
                       <div>
                         <span className="font-label-xs text-label-xs uppercase text-outline">WhatsApp Oficial · Victoria</span>
-                        <p className="font-title-md text-title-md text-primary font-bold">+54 9 261 668-8994</p>
+                        <p className="font-title-md text-title-md text-primary font-bold">Mensaje Directo</p>
                       </div>
                     </div>
                     <a
@@ -146,7 +146,7 @@ export const ContactFormSection: React.FC = () => {
                     <input
                       className="w-full px-space-md py-space-sm rounded-xl bg-surface text-on-surface placeholder:text-outline font-body-md text-body-md outline-none border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary/40 transition-all"
                       id="phone"
-                      placeholder="Ej: +54 9 261 ..."
+                      placeholder="Ej: 261 1234567"
                       required
                       type="tel"
                       value={phone}

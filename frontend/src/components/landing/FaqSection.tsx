@@ -51,7 +51,7 @@ export const FaqSection: React.FC = () => {
       question: '¿Cómo reservo mi clase de prueba con Victoria?',
       answer: (
         <p>
-          Es muy simple: escribile directo por WhatsApp a Victoria al <strong>+54 9 261 668-8994</strong> indicando el grupo de tu interés. Te confirmará la disponibilidad de cupo en el turno elegido y te agendará para vivir tu primera experiencia en el aire.
+          Es muy simple: escribile directo por WhatsApp a Victoria indicando el grupo de tu interés. Te confirmará la disponibilidad de cupo en el turno elegido y te agendará para vivir tu primera experiencia en el aire.
         </p>
       ),
     },

@@ -20,7 +20,7 @@ export const FinalCtaSection: React.FC = () => {
           ¿Lista para comenzar a volar?
         </h2>
         <p className="font-body-lg text-body-lg text-primary-fixed max-w-2xl leading-relaxed">
-          Escribile por WhatsApp a Victoria (+54 9 261 668-8994) y reservá tu clase de prueba en Vulpiare. Recordá que los cupos son strictly de 15 a 18 personas por grupo para garantizar tu seguridad y progreso.
+          Escribile por WhatsApp a Victoria y reservá tu clase de prueba en Vulpiare. Recordá que los cupos son de 15 a 18 personas por grupo para garantizar tu seguridad y progreso.
         </p>
         <div className="pt-space-sm flex flex-wrap items-center justify-center gap-space-sm w-full sm:w-auto">
           <a

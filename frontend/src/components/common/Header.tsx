@@ -236,7 +236,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
               <span className="material-symbols-outlined text-[20px]">chat</span>
               <span>Escribir a Victoria</span>
             </a>
-            <div className="text-center font-label-xs text-outline">WhatsApp: +54 9 261 668-8994</div>
+            <div className="text-center font-label-xs text-outline">Contacto directo por WhatsApp</div>
             <div className="flex items-center justify-center gap-3 pt-1">
               <a
                 className="w-8 h-8 rounded-full bg-surface flex items-center justify-center text-secondary hover:text-primary shadow-sm"
