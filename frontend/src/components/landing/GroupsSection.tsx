@@ -161,7 +161,7 @@ export const GroupsSection: React.FC = () => {
             <div className="relative h-60 overflow-hidden bg-primary-container/20">
               <img
                 alt="Acróbata realizando figura de suspensión en tela aérea en Vulpiare"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover object-[50%_30%] group-hover:scale-105 transition-transform duration-500"
                 src={adolescentesAdultosGroupImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />

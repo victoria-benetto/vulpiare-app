@@ -13,7 +13,7 @@ export const SecuritySection: React.FC = () => {
             <div className="relative w-full min-h-[420px] sm:min-h-0 sm:aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl bg-surface-container border border-surface-container">
               <img
                 alt="Profesora Victoria guiando una postura segura en telas aéreas"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-[50%_25%]"
                 src={quoteBgImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent" />

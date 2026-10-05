@@ -50,7 +50,7 @@ export const LocationSection: React.FC = () => {
                 {/* Imagen de fondo */}
                 <img
                   alt="Instalaciones Seguras Vulpiare"
-                  className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  className="absolute inset-0 w-full h-full object-cover object-[50%_25%] group-hover:scale-105 transition-transform duration-700"
                   src={victoriaStretchImg}
                 />
                 
