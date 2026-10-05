@@ -46,7 +46,7 @@ export const LocationSection: React.FC = () => {
             </div>
 
             <div className="lg:col-span-6 relative mt-6 lg:mt-0">
-              <div className="relative w-full min-h-[430px] lg:min-h-0 lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-surface-container-high flex flex-col justify-between p-4 sm:p-space-lg group">
+              <div className="relative w-full min-h-[490px] sm:min-h-[440px] lg:min-h-0 lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-surface-container-high flex flex-col justify-between p-4 sm:p-space-lg group">
                 {/* Imagen de fondo */}
                 <img
                   alt="Instalaciones Seguras Vulpiare"
@@ -62,16 +62,16 @@ export const LocationSection: React.FC = () => {
                   <span className="px-space-sm py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-xs text-label-xs uppercase font-bold tracking-wider inline-block">
                     Estudio de Telas
                   </span>
-                  <h3 className="font-headline-sm text-headline-sm text-on-primary font-bold">
+                  <h3 className="text-xl sm:text-headline-sm font-bold text-on-primary">
                     Instalaciones Seguras
                   </h3>
-                  <p className="font-body-sm text-body-sm text-on-primary/90 leading-relaxed max-w-md">
+                  <p className="text-xs sm:text-body-sm text-on-primary/90 leading-relaxed max-w-md">
                     Equipamiento técnico para alturas de entrenamiento certificadas, colchonetas de protección y ambiente higienizado.
                   </p>
                 </div>
 
                 {/* Única Opción de Ir al Mapa */}
-                <div className="relative z-10 p-3.5 sm:p-space-md rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md border border-surface-container shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <div className="relative z-10 p-3 sm:p-space-md rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md border border-surface-container shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mt-4">
                   <div>
                     <p className="font-title-md text-title-md text-primary font-bold flex items-center gap-1.5">
                       <span className="material-symbols-outlined text-secondary text-[20px]">map</span>
@@ -82,7 +82,7 @@ export const LocationSection: React.FC = () => {
                     </p>
                   </div>
                   <a
-                    className="px-space-xl py-space-md rounded-full bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider font-bold shadow-md hover:bg-primary-container transition-all flex items-center justify-center gap-2 w-full sm:w-auto flex-shrink-0"
+                    className="px-4 sm:px-space-xl py-2.5 sm:py-space-md rounded-full bg-primary text-on-primary font-label-md text-xs sm:text-label-md uppercase tracking-wider font-bold shadow-md hover:bg-primary-container transition-all flex items-center justify-center gap-2 w-full sm:w-auto shrink-0"
                     href={GOOGLE_MAPS_LOCATION_URL}
                     rel="noopener noreferrer"
                     target="_blank"

@@ -81,11 +81,6 @@ export const GroupsSection: React.FC = () => {
 
           {/* GRUPO 2: JÓVENES / ADULTOS */}
           <div className="flex flex-col rounded-3xl overflow-hidden bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 border-2 border-secondary/40 group relative">
-            <div className="absolute -top-1 right-6 z-20">
-              <span className="px-space-md py-0.5 rounded-b-xl bg-primary text-on-primary font-label-xs text-label-xs uppercase font-bold tracking-widest shadow-md">
-                Doble Turno
-              </span>
-            </div>
             <div className="relative h-60 overflow-hidden bg-primary-container/20">
               <img
                 alt="Adultos y jóvenes entrenando fuerza en telas aéreas e inversiones"
@@ -93,9 +88,12 @@ export const GroupsSection: React.FC = () => {
                 src={jovenesAdultosGroupImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
-              <div className="absolute top-4 left-4">
-                <span className="px-space-sm py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-xs text-label-xs uppercase font-bold tracking-wider">
+              <div className="absolute top-4 left-4 right-4 flex items-start justify-between gap-2 z-10">
+                <span className="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-xs text-[11px] sm:text-label-xs uppercase font-bold tracking-wider">
                   Grupo Jóvenes / Adultos
+                </span>
+                <span className="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-xs text-[10px] sm:text-label-xs uppercase font-bold tracking-wider shadow-md shrink-0">
+                  Doble Turno
                 </span>
               </div>
               <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center text-on-primary">
@@ -105,11 +103,11 @@ export const GroupsSection: React.FC = () => {
                 </span>
               </div>
             </div>
-            <div className="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+            <div className="p-4 sm:p-space-lg flex flex-col flex-1 justify-between gap-space-md">
               <div className="space-y-space-sm">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-headline-sm text-headline-sm text-primary">Jóvenes / Adultos</h3>
-                  <span className="text-xs px-2.5 py-1 rounded-full bg-surface-container text-secondary font-bold">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-lg sm:text-headline-sm font-headline-sm text-primary">Jóvenes / Adultos</h3>
+                  <span className="text-xs px-2.5 py-1 rounded-full bg-surface-container text-secondary font-bold shrink-0">
                     15 - 18 cupos
                   </span>
                 </div>
@@ -179,12 +177,12 @@ export const GroupsSection: React.FC = () => {
                 </span>
               </div>
             </div>
-            <div className="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+            <div className="p-4 sm:p-space-lg flex flex-col flex-1 justify-between gap-space-md">
               <div className="space-y-space-sm">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-headline-sm text-headline-sm text-primary">Adolescentes / Adultos</h3>
-                  <span className="text-xs px-2.5 py-1 rounded-full bg-surface-container text-secondary font-bold">
-                    15 - 18 alumnas
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-lg sm:text-headline-sm font-headline-sm text-primary">Adolescentes / Adultos</h3>
+                  <span className="text-xs px-2.5 py-1 rounded-full bg-surface-container text-secondary font-bold shrink-0">
+                    15 - 18 cupos
                   </span>
                 </div>
                 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
@@ -215,9 +213,9 @@ export const GroupsSection: React.FC = () => {
         </div>
 
         {/* Banner Informativo */}
-        <div className="mt-space-xl p-space-lg rounded-3xl bg-surface-container-high shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md border border-secondary/20">
-          <div className="flex items-center gap-space-md">
-            <div className="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary flex-shrink-0">
+        <div className="mt-space-xl p-4 sm:p-space-lg rounded-3xl bg-surface-container-high shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md border border-secondary/20">
+          <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-3 sm:gap-space-md">
+            <div className="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary shrink-0 mx-auto sm:mx-0">
               <span className="material-symbols-outlined text-[24px]">verified</span>
             </div>
             <div>
@@ -228,7 +226,7 @@ export const GroupsSection: React.FC = () => {
             </div>
           </div>
           <a
-            className="px-space-lg py-space-sm rounded-full bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider whitespace-nowrap shadow-md hover:bg-primary-container transition-all flex items-center gap-2"
+            className="w-full sm:w-auto px-5 py-3 rounded-full bg-primary text-on-primary font-label-md text-xs sm:text-label-md uppercase tracking-wider shadow-md hover:bg-primary-container transition-all flex items-center justify-center gap-2 font-bold shrink-0"
             href={`https://wa.me/${VULPIARE_PHONE}`}
             rel="noopener noreferrer"
             target="_blank"
