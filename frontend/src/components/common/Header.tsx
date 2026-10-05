@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import logoImg from '../../assets/images/logo.png';
 import { VULPIARE_PHONE, INSTAGRAM_URL, TIKTOK_URL, GOOGLE_MAPS_LOCATION_URL } from '../../constants/config';
 
 interface HeaderProps {
   activeSection?: string;
 }
-
-const DESKTOP_LOGO_URL = "https://lh3.googleusercontent.com/aida-public/AB6AXuDp0x16O3dQXzJBhkD6fZ0b-7VEJ5XW3VT2CgFUh3WVs6nBitiC-9w1XNDS5g1OZ3WYmXK_xMwoDxnJm-2VZ2VWYuB43lc_AeoGdgpbWlkyURcYWQwpm16RKEkE6yo-nvbmSyky-AAK5e6KVIcbdjdJG8fGwk4gr-UyfbXdhh7mWC9-9dlTMxuziukTw3KxU95icnqKIGAQ63CDmikElpHP3qfi4puuV6lwU7eB-1VlGJWw8WbyOm0HlQXtuA_87OLRqw";
-const MOBILE_LOGO_URL = "https://lh3.googleusercontent.com/aida-public/AB6AXuDlTW9C0aEFmBuYmrWvdGJzBGG9_LPGo5jdkQVg7wbxWYRU8qxEwtXfIBDgyQ3p4D991FvPICBAtcLLnLR3VPQ9gQkj6RXNV90irnulP0qIOKB9foJ4-MzO63pfKcOfSYwe9vsP_xYEY1vXtBQvLs7RgLnS7Naw5xDVr7ZRABVSNmN6M54nhFPeFvBOPLmoL3MXCP_qKHAcuL6w7_FHnFCWr16pIEQIM1vwgSd80kcvYwXn3pSmEkHuaIOl30V8buh38g";
-const DRAWER_LOGO_URL = "https://lh3.googleusercontent.com/aida-public/AB6AXuCjJdxryvKpnU68A719fpog-aapUJaBAGhHAdYujzJxof8HmHHhsYdjDz1-JsDTIA6TeNR5nXMjT_UFDhSiHDvpDa7VU043lS7rmmrP50GLEqX_yDIyp63RdZAH4ueYXvucwUHEMpcST62hlvLgYnIBNMBVbsp3tTepvBui1mY6Wr7QgcFgA843ICCE_LOcXOmuGaddDUFmnJti7uLROtBCMSrs3dtvA9ZZPPHrlNqrROB_OIJZzj0akuk0GncPM3JdIw";
 
 export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -44,7 +41,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
             <img
               alt="Vulpiare - Academia de Acrobacias en Tela"
               className="h-12 w-12 rounded-full object-contain shadow-sm group-hover:scale-105 transition-transform shrink-0"
-              src={DESKTOP_LOGO_URL}
+              src={logoImg}
             />
             <div className="flex flex-col whitespace-nowrap">
               <span className="font-headline-sm text-headline-sm text-primary tracking-wide leading-tight">Vulpiare</span>
@@ -54,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
             </div>
           </a>
 
-          {/* Navegación Principal (Centered, flex-wrap-none) */}
+          {/* Navegación Principal */}
           <nav className="flex items-center gap-1 xl:gap-1.5 overflow-x-auto no-scrollbar py-1">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id || activeSection === link.href.substring(1);
@@ -74,7 +71,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
             })}
           </nav>
 
-          {/* Botones de Acción y Redes Navbar (Far Right, shrink-0) */}
+          {/* Botones de Acción y Redes Navbar */}
           <div className="flex items-center gap-2 shrink-0 ml-2">
             <a
               aria-label="Instagram"
@@ -122,7 +119,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
             <img
               alt="Vulpiare Logo"
               className="w-8 h-8 rounded-full object-cover shadow-[0_2px_6px_rgba(74,40,109,0.12)] shrink-0"
-              src={MOBILE_LOGO_URL}
+              src={logoImg}
             />
             <div className="flex flex-col whitespace-nowrap">
               <span className="font-headline-sm text-headline-sm tracking-wider uppercase text-primary leading-none">
@@ -178,7 +175,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
           {/* Header of Drawer */}
           <div className="p-5 border-b border-outline-variant/30 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <img alt="Vulpiare" className="w-8 h-8 rounded-full object-cover shadow-sm" src={DRAWER_LOGO_URL} />
+              <img alt="Vulpiare" className="w-8 h-8 rounded-full object-cover shadow-sm" src={logoImg} />
               <div>
                 <span className="font-headline-sm text-headline-sm text-primary block leading-none">VULPIARE</span>
                 <span className="font-label-xs text-label-xs text-secondary font-semibold uppercase tracking-wider">

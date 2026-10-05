@@ -1,8 +1,7 @@
 import React from 'react';
+import victoriaPoseImg from '../../assets/images/victoria-pose.jpg';
+import logoImg from '../../assets/images/logo.png';
 import { VULPIARE_PHONE } from '../../constants/config';
-
-const HERO_MAIN_IMAGE = "https://lh3.googleusercontent.com/aida/AEtjO1VJ9UBcZvHDr-l4ioIHnKbsvYj-aPh-FLudUB0uyjSmlOP6zbXdtNok6nQ0D4texJnT0L-9CNaF0V09I80fbnJVPm3B5SIBc-2TWQtLGuwoCLiQFpLlL3UvNMmJlX_pxQl5A4D3YQaTBo-zYWyFAooqFBTQo2IaO4uO0CZ6-pLg53J5T_-9p5ftcVmX-Gop7IFVmEH6r3zk_rbWPiesNTzdtaD1wjXi4liUfZnZvNWCp0F2LRMJkNvuSZc";
-const HERO_ISOTIPO_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuALPPByfd_2fGGJfXPbIeK5eJRZcV77_cVTGJhgjfYReIepGfB2PkjfSpZuqOm_8s-bpa9L-BwkOmZwMibdBIQYI1OVCs9eg73mY5UiAwa9TEn8mAaKjBgY-_zWd2HoRPX4EA36hiyfgA0Z8VDv7P4nOzWXGvUPACEoE1kFKQGJUfDcxLD85Fj3h7_7cDW7w7bbHjO1ip36JdgidKpLHlThLhmSoII-shKzi_hvr50H7yGS67taqegq0FQGYmW56bQrtA";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -97,9 +96,9 @@ export const HeroSection: React.FC = () => {
           <div className="lg:col-span-6 relative flex justify-center items-center">
             <div className="relative w-full aspect-[4/5] max-w-lg rounded-[2.5rem] overflow-hidden shadow-2xl bg-surface-container border border-surface-container-highest">
               <img
-                alt="Acróbata en tela aérea en Vulpiare realizando figura en apertura con telas violetas"
+                alt="Acróbata en tela aérea en Vulpiare realizando figura en apertura con telas violetas - María Victoria Benetto"
                 className="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-700 ease-out"
-                src={HERO_MAIN_IMAGE}
+                src={victoriaPoseImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
               
@@ -117,7 +116,7 @@ export const HeroSection: React.FC = () => {
                   <img
                     alt="Isotipo Vulpiare"
                     className="w-11 h-11 rounded-full object-contain border border-surface-container-highest"
-                    src={HERO_ISOTIPO_IMAGE}
+                    src={logoImg}
                   />
                   <div>
                     <h4 className="font-title-md text-title-md text-primary leading-tight">Seguridad &amp; Técnica Aérea</h4>

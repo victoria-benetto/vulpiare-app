@@ -1,7 +1,6 @@
 import React from 'react';
+import logoImg from '../../assets/images/logo.png';
 import { INSTAGRAM_URL, TIKTOK_URL } from '../../constants/config';
-
-const SOCIAL_LOGO_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuAv6fBwLhQGMoY37mg7MqH2ffGF_lYvXjOUhww1ywhWiXeQzOJU3jgwlBPTgsR2XVY-7IcQJigM229f9BFobLAKZ5RPBRJIhdC-CcZ5-nIY2uXYozXUuKuNp4XYsGSnO0iaXRtKpDktRAeaHU11-2yKUlFK6QOgjjk8QhzrrasFwMwswnMcWjSe7Y6qNUz63QrL4voDQ4Ou7-tWn-wL4rNunmS-T-JmboUStlO6X7zsmbPcDz19N0k99IzcxGw1MsPoiw";
 
 export const SocialSection: React.FC = () => {
   return (
@@ -12,7 +11,7 @@ export const SocialSection: React.FC = () => {
             <img
               alt="Vulpiare Acrotela"
               className="w-16 h-16 rounded-full object-contain border border-surface-container-highest shadow-sm flex-shrink-0"
-              src={SOCIAL_LOGO_IMAGE}
+              src={logoImg}
             />
             <div>
               <span className="font-label-xs text-label-xs uppercase tracking-widest text-secondary font-bold">

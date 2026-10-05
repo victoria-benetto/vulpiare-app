@@ -1,7 +1,6 @@
 import React from 'react';
+import logoImg from '../../assets/images/logo.png';
 import { VULPIARE_PHONE, GOOGLE_MAPS_LOCATION_URL } from '../../constants/config';
-
-const FINAL_CTA_LOGO_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuCnm_vCLTWGNuXLPZ238cxjkTPABL9sYo3MphQP2IUx-Ly0oI83z9gA7MKyeTfBZXgGOxA9udVZaPfVE2gNBfvY9WsFvyHs3Vjtx26NXK6_xbf4pU_23CNn37YJkGO5PIHlmltd6-qLn8S-iJLJP2ofeVRUNPojuXFd8rh2hFDR1pFJRt-lEGNBO_5bw6xLx0vp_SwgjnapSpOGQypot2vYB9Z3yGXAk0ZP6Zo2oY8NzMa8NoTqaaX5-CjgRcnVatrRGQ";
 
 export const FinalCtaSection: React.FC = () => {
   const whatsappUrl = `https://wa.me/${VULPIARE_PHONE}?text=Hola%20Victoria,%20quisiera%20coordinar%20mi%20clase%20de%20prueba%20en%20Vulpiare`;
@@ -12,7 +11,7 @@ export const FinalCtaSection: React.FC = () => {
         <img
           alt="Isotipo Vulpiare"
           className="w-16 h-16 rounded-full object-contain bg-surface-container-lowest/10 p-1 backdrop-blur-sm border border-secondary-fixed/40"
-          src={FINAL_CTA_LOGO_IMAGE}
+          src={logoImg}
         />
         <span className="font-label-xs text-label-xs uppercase tracking-widest text-secondary-fixed-dim font-bold">
           Comenzá hoy en telas aéreas con Victoria
@@ -21,7 +20,7 @@ export const FinalCtaSection: React.FC = () => {
           ¿Lista para comenzar a volar?
         </h2>
         <p className="font-body-lg text-body-lg text-primary-fixed max-w-2xl leading-relaxed">
-          Escribile por WhatsApp a Victoria (+54 9 261 668-8994) y reservá tu clase de prueba en Vulpiare. Recordá que los cupos son estrictamente de 15 a 18 personas por grupo para garantizar tu seguridad y progreso.
+          Escribile por WhatsApp a Victoria (+54 9 261 668-8994) y reservá tu clase de prueba en Vulpiare. Recordá que los cupos son strictly de 15 a 18 personas por grupo para garantizar tu seguridad y progreso.
         </p>
         <div className="pt-space-sm flex flex-wrap items-center justify-center gap-space-sm w-full sm:w-auto">
           <a

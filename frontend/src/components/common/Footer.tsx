@@ -1,7 +1,6 @@
 import React from 'react';
+import logoImg from '../../assets/images/logo.png';
 import { VULPIARE_PHONE, INSTAGRAM_URL, TIKTOK_URL, GOOGLE_MAPS_LOCATION_URL } from '../../constants/config';
-
-const DESKTOP_FOOTER_LOGO = "https://lh3.googleusercontent.com/aida-public/AB6AXuBZxevmnQkRzPOaaBzF73uoOXag1oc_RsSMbOl8eC6wszarUa5m2O1GZfhj5lVYycbZFGkfx7KgZk_kBgB5drFXdTEjsVfpZVwauZRhWNcD7_0MEIn3NUogknNHALpPW4BV0by5QWpElNOTfYStDrfO7qYf96bioh2scayBo3CgaY_q3r6fqjkbuAjLBHxG9oTOhJ8vl9LtiPXfrOPjkF_e0GMo6ql8VU8VZcSZIwqC30fVnumhHBWV-5GnL2odoO2Z6A";
 
 export const Footer: React.FC = () => {
   return (
@@ -14,7 +13,7 @@ export const Footer: React.FC = () => {
               <img
                 alt="Logo Vulpiare"
                 className="w-12 h-12 rounded-full object-contain"
-                src={DESKTOP_FOOTER_LOGO}
+                src={logoImg}
               />
               <div>
                 <span className="font-headline-md text-headline-md text-primary leading-tight block">Vulpiare</span>

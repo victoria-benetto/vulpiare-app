@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
+import logoImg from '../../assets/images/logo.png';
 import { VULPIARE_PHONE, INSTAGRAM_URL, GOOGLE_MAPS_LOCATION_URL } from '../../constants/config';
-
-const CONTACT_LOGO_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuADq4PSe1-QymNDYqlTdq8IMylALWLLAOMLor4A-4-XwZOwRaUX_u9I7cy8a5eY1LB8RubusBOD2ZFuGrdd9pQn7kDFYsr1odkcVvLpsu8RrOunu6K5ZyQId9by_rZqyz4TXfEHS2lRVyh8FvqNqAg9F_lzDEIXML-B4cipqiStOT1Tp8YnCqxDILno_lRygnu6pumUZflphGQp4BZ2VHrsFuHu6yyjw4UIGXO_KeSJuixSPUvJqQ527IBBmYPMxsFFbQ";
 
 export const ContactFormSection: React.FC = () => {
   const [name, setName] = useState('');
@@ -36,7 +35,7 @@ export const ContactFormSection: React.FC = () => {
                   <img
                     alt="Logo"
                     className="w-8 h-8 rounded-full object-contain"
-                    src={CONTACT_LOGO_IMAGE}
+                    src={logoImg}
                   />
                   <span className="font-label-xs text-label-xs uppercase tracking-widest text-secondary font-bold">
                     Inscripciones y Cupos
