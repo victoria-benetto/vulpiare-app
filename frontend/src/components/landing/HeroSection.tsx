@@ -106,7 +106,7 @@ export const HeroSection: React.FC = () => {
               <div className="absolute top-6 right-6 px-space-md py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center gap-space-xs border border-surface-container">
                 <span className="material-symbols-outlined text-secondary text-[16px]">verified</span>
                 <span className="font-label-xs text-label-xs text-primary uppercase font-bold tracking-wider">
-                  Ciclo Activo 2025
+                  Ciclo Activo 2026
                 </span>
               </div>
 

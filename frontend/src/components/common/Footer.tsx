@@ -135,7 +135,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="pt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container text-center sm:text-left">
-          <p>© 2025 Vulpiare. Academia de Acrobacias Aéreas en Tela · Dirección: Victoria. Todos los derechos reservados.</p>
+          <p>© 2026 Vulpiare. Academia de Acrobacias Aéreas en Tela · Dirección: Victoria. Todos los derechos reservados.</p>
           <p className="text-outline">Grupos reducidos de 15 a 18 personas · Seguro de accidentes personales para telas aéreas incluido.</p>
         </div>
       </div>

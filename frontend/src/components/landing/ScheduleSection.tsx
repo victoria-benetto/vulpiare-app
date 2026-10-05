@@ -65,7 +65,7 @@ export const ScheduleSection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
           <div>
             <span className="font-label-xs text-label-xs uppercase tracking-widest text-secondary font-bold">
-              Cronograma Oficial 2025
+              Cronograma Oficial 2026
             </span>
             <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight mt-space-xs">
               Grilla de Horarios de Acrobacias en Tela
