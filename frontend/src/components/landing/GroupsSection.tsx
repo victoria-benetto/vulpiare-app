@@ -1,8 +1,8 @@
 import React from 'react';
 import { VULPIARE_PHONE } from '../../constants/config';
-import kidsSilksImg from '../../assets/images/kids-silks.png';
-import adultSilksImg from '../../assets/images/adult-silks.png';
-import scheduleSilksImg from '../../assets/images/schedule-silks.png';
+import ninasGroupImg from '../../assets/images/ninas-group.jpg';
+import jovenesAdultosGroupImg from '../../assets/images/jovenes-adultos-group.jpg';
+import adolescentesAdultosGroupImg from '../../assets/images/adolescentes-adultos-group.jpg';
 
 export const GroupsSection: React.FC = () => {
   return (
@@ -28,9 +28,9 @@ export const GroupsSection: React.FC = () => {
           <div className="flex flex-col rounded-3xl overflow-hidden bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 border border-surface-container-high group">
             <div className="relative h-60 overflow-hidden bg-primary-container/20">
               <img
-                alt="Niñas en clase de telas aéreas jugando y realizando trepadas seguras"
+                alt="Niñas en clase de telas aéreas en Vulpiare"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src={kidsSilksImg}
+                src={ninasGroupImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
               <div className="absolute top-4 left-4">
@@ -90,7 +90,7 @@ export const GroupsSection: React.FC = () => {
               <img
                 alt="Adultos y jóvenes entrenando fuerza en telas aéreas e inversiones"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src={adultSilksImg}
+                src={jovenesAdultosGroupImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
               <div className="absolute top-4 left-4">
@@ -162,9 +162,9 @@ export const GroupsSection: React.FC = () => {
           <div className="flex flex-col rounded-3xl overflow-hidden bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 border border-surface-container-high group">
             <div className="relative h-60 overflow-hidden bg-primary-container/20">
               <img
-                alt="Acróbata realizando figura de suspensión en tela aérea con postura elegante"
+                alt="Acróbata realizando figura de suspensión en tela aérea en Vulpiare"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src={scheduleSilksImg}
+                src={adolescentesAdultosGroupImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
               <div className="absolute top-4 left-4">

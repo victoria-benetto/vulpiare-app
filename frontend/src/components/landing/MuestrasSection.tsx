@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-// Fallback images for upcoming 2026
-import scheduleSilksImg from '../../assets/images/schedule-silks.png';
-import heroAcrobatImg from '../../assets/images/hero-acrobat.png';
+// Cover image for Muestra 2026 from fotos 2 (Cámara 1 (103))
+import muestra2026Cover from '../../assets/images/muestra-2026-cover.jpg';
 
 // Load ALL photos from assets using Vite's import.meta.glob
 const glob2023 = import.meta.glob<{ default: string }>('../../assets/images/muestras/2023/*.jpg', { eager: true });
@@ -51,8 +50,8 @@ export const MuestrasSection: React.FC = () => {
       badgeType: 'Teatro',
       editionBadge: 'Edición 2023',
       description: 'Puesta en escena en sala teatral con iluminación artística, solos y dúos coreográficos en telas aéreas.',
-      coverImage: photos2023[0]?.src || scheduleSilksImg,
-      gallery: photos2023.length > 0 ? photos2023 : [{ src: scheduleSilksImg, caption: 'Muestra 2023' }],
+      coverImage: photos2023[0]?.src || muestra2026Cover,
+      gallery: photos2023,
     },
     {
       year: 2024,
@@ -61,8 +60,8 @@ export const MuestrasSection: React.FC = () => {
       badgeType: 'Teatro',
       editionBadge: 'Edición 2024',
       description: 'Presentación abierta para familias y comunidad en sala teatral con iluminación artística y figuras sincronizadas.',
-      coverImage: photos2024[0]?.src || scheduleSilksImg,
-      gallery: photos2024.length > 0 ? photos2024 : [{ src: scheduleSilksImg, caption: 'Muestra 2024' }],
+      coverImage: photos2024[0]?.src || muestra2026Cover,
+      gallery: photos2024,
     },
     {
       year: 2025,
@@ -71,8 +70,8 @@ export const MuestrasSection: React.FC = () => {
       badgeType: 'Teatro',
       editionBadge: 'Edición 2025',
       description: 'Gala anual de cierre en sala teatral con solos, dúos y cuadros grupales en telas aéreas.',
-      coverImage: photos2025[0]?.src || scheduleSilksImg,
-      gallery: photos2025.length > 0 ? photos2025 : [{ src: scheduleSilksImg, caption: 'Muestra 2025' }],
+      coverImage: photos2025[0]?.src || muestra2026Cover,
+      gallery: photos2025,
     },
     {
       year: 2026,
@@ -81,16 +80,14 @@ export const MuestrasSection: React.FC = () => {
       badgeType: 'Próximamente',
       editionBadge: 'Edición 2026',
       description: 'Próximamente más información.',
-      coverImage: scheduleSilksImg,
+      coverImage: muestra2026Cover,
       isUpcoming: true,
-      gallery: [
-        { src: scheduleSilksImg, caption: 'Avance de Ensayos & Preparativos 2026' },
-        { src: heroAcrobatImg, caption: 'Diseño Escénico Ciclo Lectivo 2026' },
-      ],
+      gallery: [],
     },
   ];
 
   const handleOpenGallery = (muestra: MuestraData) => {
+    if (muestra.gallery.length === 0) return;
     setSelectedMuestra(muestra);
     setActivePhotoIndex(0);
   };
@@ -101,12 +98,12 @@ export const MuestrasSection: React.FC = () => {
   };
 
   const handleNextPhoto = () => {
-    if (!selectedMuestra) return;
+    if (!selectedMuestra || selectedMuestra.gallery.length === 0) return;
     setActivePhotoIndex((prev) => (prev + 1) % selectedMuestra.gallery.length);
   };
 
   const handlePrevPhoto = () => {
-    if (!selectedMuestra) return;
+    if (!selectedMuestra || selectedMuestra.gallery.length === 0) return;
     setActivePhotoIndex((prev) => (prev - 1 + selectedMuestra.gallery.length) % selectedMuestra.gallery.length);
   };
 
@@ -147,13 +144,17 @@ export const MuestrasSection: React.FC = () => {
             >
               {/* Image Banner */}
               <div
-                className="relative aspect-[4/3] overflow-hidden bg-primary-container/20 cursor-pointer"
+                className={`relative aspect-[4/3] overflow-hidden bg-primary-container/20 ${
+                  muestra.gallery.length > 0 ? 'cursor-pointer' : ''
+                }`}
                 onClick={() => handleOpenGallery(muestra)}
-                title={`Ver galería de fotos de ${muestra.title}`}
+                title={muestra.gallery.length > 0 ? `Ver galería de fotos de ${muestra.title}` : muestra.title}
               >
                 <img
                   alt={`${muestra.title} · ${muestra.badgeOverlay}`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={`w-full h-full object-cover transition-transform duration-500 ${
+                    muestra.gallery.length > 0 ? 'group-hover:scale-105' : ''
+                  }`}
                   src={muestra.coverImage}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/75 via-primary/10 to-transparent" />
@@ -185,16 +186,20 @@ export const MuestrasSection: React.FC = () => {
               <div className="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
                 <div className="space-y-space-sm">
                   <div className="flex items-center justify-between">
-                    <button
-                      className="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors text-left flex items-center gap-2 hover:underline focus:outline-none"
-                      onClick={() => handleOpenGallery(muestra)}
-                      title={`Ver galería fotográfica de ${muestra.title}`}
-                    >
-                      <span>{muestra.title}</span>
-                      <span className="material-symbols-outlined text-[20px] text-secondary opacity-80 group-hover:scale-110 transition-transform">
-                        photo_camera
-                      </span>
-                    </button>
+                    {muestra.gallery.length > 0 ? (
+                      <button
+                        className="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors text-left flex items-center gap-2 hover:underline focus:outline-none"
+                        onClick={() => handleOpenGallery(muestra)}
+                        title={`Ver galería fotográfica de ${muestra.title}`}
+                      >
+                        <span>{muestra.title}</span>
+                        <span className="material-symbols-outlined text-[20px] text-secondary opacity-80 group-hover:scale-110 transition-transform">
+                          photo_camera
+                        </span>
+                      </button>
+                    ) : (
+                      <h3 className="font-headline-sm text-headline-sm text-primary">{muestra.title}</h3>
+                    )}
                     <span
                       className={`text-xs px-2.5 py-1 rounded-full font-bold ${
                         muestra.isUpcoming
@@ -215,13 +220,19 @@ export const MuestrasSection: React.FC = () => {
                   <span className="flex items-center gap-1 font-semibold">
                     <span className="material-symbols-outlined text-[18px]">theater_comedy</span> Gala Anual
                   </span>
-                  <button
-                    className="text-xs text-on-surface-variant hover:text-primary font-medium flex items-center gap-1 transition-colors"
-                    onClick={() => handleOpenGallery(muestra)}
-                  >
-                    <span>Registro Fotográfico ({muestra.gallery.length})</span>
-                    <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
-                  </button>
+                  {muestra.gallery.length > 0 ? (
+                    <button
+                      className="text-xs text-on-surface-variant hover:text-primary font-medium flex items-center gap-1 transition-colors"
+                      onClick={() => handleOpenGallery(muestra)}
+                    >
+                      <span>Registro Fotográfico ({muestra.gallery.length})</span>
+                      <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+                    </button>
+                  ) : (
+                    <span className="text-xs text-on-surface-variant font-medium">
+                      Registro Fotográfico (Próximamente)
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
@@ -230,7 +241,7 @@ export const MuestrasSection: React.FC = () => {
       </div>
 
       {/* Gallery Modal */}
-      {selectedMuestra && (
+      {selectedMuestra && selectedMuestra.gallery.length > 0 && (
         <div
           className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-fade-in"
           onClick={handleCloseGallery}
@@ -251,9 +262,7 @@ export const MuestrasSection: React.FC = () => {
                     </span>
                   </h3>
                   <p className="text-xs text-on-surface-variant">
-                    {selectedMuestra.isUpcoming
-                      ? 'Registro Fotográfico Próximamente · Muestras Vulpiare'
-                      : `Registro Fotográfico (${selectedMuestra.gallery.length} fotos) · Gala Anual Vulpiare`}
+                    {`Registro Fotográfico (${selectedMuestra.gallery.length} fotos) · Gala Anual Vulpiare`}
                   </p>
                 </div>
               </div>
