@@ -37,32 +37,32 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
   return (
     <>
       {/* HEADER / NAVBAR DESKTOP */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(74,40,109,0.06)] border-b border-surface-container hidden xl:block">
-        <div className="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-space-md">
-          {/* Brand Logo */}
-          <a className="flex items-center gap-space-sm group" href="#inicio">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(74,40,109,0.06)] border-b border-surface-container hidden xl:block">
+        <div className="h-20 w-full px-6 xl:px-10 flex items-center justify-between gap-4">
+          {/* Brand Logo (Far Left, shrink-0 to prevent compression) */}
+          <a className="flex items-center gap-3 shrink-0 group mr-2" href="#inicio">
             <img
               alt="Vulpiare - Academia de Acrobacias en Tela"
-              className="h-12 w-12 rounded-full object-contain shadow-sm group-hover:scale-105 transition-transform"
+              className="h-12 w-12 rounded-full object-contain shadow-sm group-hover:scale-105 transition-transform shrink-0"
               src={DESKTOP_LOGO_URL}
             />
-            <div className="flex flex-col">
+            <div className="flex flex-col whitespace-nowrap">
               <span className="font-headline-sm text-headline-sm text-primary tracking-wide leading-tight">Vulpiare</span>
-              <span className="font-label-xs text-label-xs uppercase tracking-widest text-secondary font-bold">
+              <span className="font-label-xs text-[10px] uppercase tracking-widest text-secondary font-bold">
                 Acrobacias Aéreas en Tela
               </span>
             </div>
           </a>
 
-          {/* Navegación Principal */}
-          <nav className="flex items-center gap-space-xs p-space-xs">
+          {/* Navegación Principal (Centered, flex-wrap-none) */}
+          <nav className="flex items-center gap-1 xl:gap-1.5 overflow-x-auto no-scrollbar py-1">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id || activeSection === link.href.substring(1);
               return (
                 <a
                   key={link.id}
                   href={link.href}
-                  className={`px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase tracking-wider transition-all ${
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all whitespace-nowrap ${
                     isActive
                       ? 'bg-secondary-fixed text-on-secondary-fixed font-bold shadow-sm'
                       : 'text-on-surface-variant hover:text-primary hover:bg-surface-container'
@@ -74,11 +74,11 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
             })}
           </nav>
 
-          {/* Botones de Acción y Redes Navbar */}
-          <div className="flex items-center gap-space-sm">
+          {/* Botones de Acción y Redes Navbar (Far Right, shrink-0) */}
+          <div className="flex items-center gap-2 shrink-0 ml-2">
             <a
               aria-label="Instagram"
-              className="hidden sm:inline-flex w-9 h-9 rounded-full bg-surface-container hover:bg-secondary-fixed text-primary items-center justify-center transition-colors"
+              className="w-9 h-9 rounded-full bg-surface-container hover:bg-secondary-fixed text-primary flex items-center justify-center transition-colors shrink-0"
               href={INSTAGRAM_URL}
               rel="noopener noreferrer"
               target="_blank"
@@ -88,7 +88,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
             </a>
             <a
               aria-label="TikTok"
-              className="hidden sm:inline-flex w-9 h-9 rounded-full bg-surface-container hover:bg-secondary-fixed text-primary items-center justify-center transition-colors"
+              className="w-9 h-9 rounded-full bg-surface-container hover:bg-secondary-fixed text-primary flex items-center justify-center transition-colors shrink-0"
               href={TIKTOK_URL}
               rel="noopener noreferrer"
               target="_blank"
@@ -97,7 +97,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
               <span className="material-symbols-outlined text-[18px]">play_circle</span>
             </a>
             <a
-              className="hidden md:inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-container transition-all font-label-md text-label-md uppercase tracking-wide font-semibold"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-container transition-all text-xs uppercase tracking-wide font-semibold whitespace-nowrap shrink-0"
               href={`https://wa.me/${VULPIARE_PHONE}`}
               rel="noopener noreferrer"
               target="_blank"
@@ -106,7 +106,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
               <span>WhatsApp Victoria</span>
             </a>
             <a
-              className="inline-flex items-center px-space-lg py-space-sm rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all font-label-md text-label-md uppercase tracking-wider shadow-[0_8px_24px_-4px_rgba(74,40,109,0.15)] font-semibold"
+              className="inline-flex items-center px-4 py-2 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all text-xs uppercase tracking-wider shadow-[0_8px_24px_-4px_rgba(74,40,109,0.15)] font-semibold whitespace-nowrap shrink-0"
               href="#horarios"
             >
               Ver Horarios
@@ -118,13 +118,13 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
       {/* MOBILE TOP BAR */}
       <header className="fixed top-0 w-full z-40 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(74,40,109,0.04)] xl:hidden">
         <div className="h-16 px-gutter-mobile flex items-center justify-between">
-          <a className="flex items-center gap-space-sm nav-link" href="#inicio">
+          <a className="flex items-center gap-space-sm nav-link shrink-0" href="#inicio">
             <img
               alt="Vulpiare Logo"
-              className="w-8 h-8 rounded-full object-cover shadow-[0_2px_6px_rgba(74,40,109,0.12)]"
+              className="w-8 h-8 rounded-full object-cover shadow-[0_2px_6px_rgba(74,40,109,0.12)] shrink-0"
               src={MOBILE_LOGO_URL}
             />
-            <div className="flex flex-col">
+            <div className="flex flex-col whitespace-nowrap">
               <span className="font-headline-sm text-headline-sm tracking-wider uppercase text-primary leading-none">
                 VULPIARE
               </span>
@@ -133,7 +133,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
               </span>
             </div>
           </a>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 shrink-0">
             <a
               aria-label="WhatsApp Victoria"
               className="w-11 h-11 flex items-center justify-center rounded-full text-[#1EBE5D] hover:bg-surface-container-low transition-colors"
