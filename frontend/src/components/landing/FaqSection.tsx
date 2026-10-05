@@ -7,7 +7,7 @@ interface FaqItem {
 }
 
 export const FaqSection: React.FC = () => {
-  const [openId, setOpenId] = useState<number | null>(1); // FAQ 1 open by default
+  const [openId, setOpenId] = useState<number | null>(1);
 
   const faqs: FaqItem[] = [
     {
@@ -39,7 +39,7 @@ export const FaqSection: React.FC = () => {
     },
     {
       id: 4,
-      question: '¿A partir de qué edad pueden empezar en el grupo de Niñas (N)?',
+      question: '¿A partir de qué edad pueden empezar en el grupo de Niñas?',
       answer: (
         <p>
           Las infancias pueden comenzar <strong>a partir de los 6 años en adelante</strong>. Adaptamos la enseñanza con dinámicas lúdicas, desarrollo motor y trepadas a baja altura con acompañamiento físico permanente de Victoria.

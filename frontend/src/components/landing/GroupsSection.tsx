@@ -1,9 +1,8 @@
 import React from 'react';
 import { VULPIARE_PHONE } from '../../constants/config';
-
-const NINAS_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuD7xI5l2Y6_PSl9123zkTzWMh7z7iVoN6u9ey0wfKrxX2SIUnhyAaaCGiPGjL30TGQiFJzN08uczC0y6X6iJdabLp4LgRUWVggHNtYQuOS9ivkmTJCzH4yn8X_nSDpq82qhoRM5bFJqLVc8d9uUq9qx_F8x1U4v77QNY6PtMh4G4XK7465vxtslrxBPXgQ2C264WstQODL4YmfTK4VyFCbgSJmO6iq-ulOvqulbt8YVyKw753Pd-3Cf";
-const JOVENES_ADULTOS_IMAGE = "https://lh3.googleusercontent.com/aida/AEtjO1VJ9UBcZvHDr-l4ioIHnKbsvYj-aPh-FLudUB0uyjSmlOP6zbXdtNok6nQ0D4texJnT0L-9CNaF0V09I80fbnJVPm3B5SIBc-2TWQtLGuwoCLiQFpLlL3UvNMmJlX_pxQl5A4D3YQaTBo-zYWyFAooqFBTQo2IaO4uO0CZ6-pLg53J5T_-9p5ftcVmX-Gop7IFVmEH6r3zk_rbWPiesNTzdtaD1wjXi4liUfZnZvNWCp0F2LRMJkNvuSZc";
-const ADOLES_ADULTOS_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuDFH3QA2k_ythGKjFrMQJzc3maTwuGKBdooRz1594ukt_BPcb5BDzAhP8CSJb5b7tNcF16vimJRgJGNp2XWgaLRv5ohPoThcAEv-1e-m9ic_f3Ns1c8o9tlLzIVe-7o5gg58XqT-JDk-PimJdg-MYOvgMux8c3PAAVIHi_o72XJ01ZEs6vNmfQt3cOOdJiH8CSyND_6bqSiD7z-NC6qCLD-7VBl6Ja9wfe_VsE2CZUJ6Pu_r3zXLJnk";
+import kidsSilksImg from '../../assets/images/kids-silks.png';
+import adultSilksImg from '../../assets/images/adult-silks.png';
+import scheduleSilksImg from '../../assets/images/schedule-silks.png';
 
 export const GroupsSection: React.FC = () => {
   return (
@@ -25,18 +24,18 @@ export const GroupsSection: React.FC = () => {
 
         {/* Grid de 3 Tarjetas de Grupos */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
-          {/* GRUPO 1: NIÑAS (N) */}
+          {/* GRUPO 1: NIÑAS */}
           <div className="flex flex-col rounded-3xl overflow-hidden bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 border border-surface-container-high group">
             <div className="relative h-60 overflow-hidden bg-primary-container/20">
               <img
                 alt="Niñas en clase de telas aéreas jugando y realizando trepadas seguras"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src={NINAS_IMAGE}
+                src={kidsSilksImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
               <div className="absolute top-4 left-4">
                 <span className="px-space-sm py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-xs text-label-xs uppercase font-bold tracking-wider">
-                  Grupo Niñas (N)
+                  Grupo Niñas
                 </span>
               </div>
               <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center text-on-primary">
@@ -49,7 +48,7 @@ export const GroupsSection: React.FC = () => {
             <div className="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
               <div className="space-y-space-sm">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-headline-sm text-headline-sm text-primary">Niñas (N)</h3>
+                  <h3 className="font-headline-sm text-headline-sm text-primary">Niñas</h3>
                   <span className="text-xs px-2.5 py-1 rounded-full bg-surface-container text-secondary font-bold">
                     15 - 18 alumnas
                   </span>
@@ -80,7 +79,7 @@ export const GroupsSection: React.FC = () => {
             </div>
           </div>
 
-          {/* GRUPO 2: JÓVENES / ADULTOS (J/A) */}
+          {/* GRUPO 2: JÓVENES / ADULTOS */}
           <div className="flex flex-col rounded-3xl overflow-hidden bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 border-2 border-secondary/40 group relative">
             <div className="absolute -top-1 right-6 z-20">
               <span className="px-space-md py-0.5 rounded-b-xl bg-primary text-on-primary font-label-xs text-label-xs uppercase font-bold tracking-widest shadow-md">
@@ -91,12 +90,12 @@ export const GroupsSection: React.FC = () => {
               <img
                 alt="Adultos y jóvenes entrenando fuerza en telas aéreas e inversiones"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src={JOVENES_ADULTOS_IMAGE}
+                src={adultSilksImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
               <div className="absolute top-4 left-4">
                 <span className="px-space-sm py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-xs text-label-xs uppercase font-bold tracking-wider">
-                  Grupo Jóvenes / Adultos (J/A)
+                  Grupo Jóvenes / Adultos
                 </span>
               </div>
               <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center text-on-primary">
@@ -109,7 +108,7 @@ export const GroupsSection: React.FC = () => {
             <div className="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
               <div className="space-y-space-sm">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-headline-sm text-headline-sm text-primary">Jóvenes / Adultos (J/A)</h3>
+                  <h3 className="font-headline-sm text-headline-sm text-primary">Jóvenes / Adultos</h3>
                   <span className="text-xs px-2.5 py-1 rounded-full bg-surface-container text-secondary font-bold">
                     15 - 18 cupos
                   </span>
@@ -117,14 +116,33 @@ export const GroupsSection: React.FC = () => {
                 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
                   Acondicionamiento físico específico para la tela, inversiones controladas, armado de nudos, figuras en altura y secuencias coreográficas fluidas. Ganás tono muscular y confianza paso a paso.
                 </p>
-                <div className="p-space-sm rounded-2xl bg-surface-container-low border border-surface-container flex flex-col gap-2">
+                <div className="p-space-sm rounded-2xl bg-surface-container-low border border-surface-container flex flex-col gap-2.5">
                   <div>
-                    <span className="font-label-xs text-[11px] text-secondary font-bold uppercase">Opción Mañana:</span>
-                    <p className="font-title-md text-title-md text-primary font-bold">Lunes y Miércoles · 08:00 a 10:00 hs</p>
+                    <span className="font-label-xs text-[11px] text-secondary font-bold uppercase tracking-wider block mb-1">
+                      Turno Mañana:
+                    </span>
+                    <div className="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+                      <span className="material-symbols-outlined text-secondary text-[18px]">calendar_today</span>
+                      <span>Lunes y Miércoles</span>
+                    </div>
+                    <div className="flex items-center gap-space-xs text-secondary font-title-md text-title-md font-bold mt-0.5">
+                      <span className="material-symbols-outlined text-[18px]">schedule</span>
+                      <span>08:00 a 10:00 hs</span>
+                    </div>
                   </div>
-                  <div className="border-t border-surface-container pt-1">
-                    <span className="font-label-xs text-[11px] text-secondary font-bold uppercase">Opción Tarde:</span>
-                    <p className="font-title-md text-title-md text-primary font-bold">Martes y Jueves · 16:00 a 18:00 hs</p>
+
+                  <div className="border-t border-surface-container pt-2">
+                    <span className="font-label-xs text-[11px] text-secondary font-bold uppercase tracking-wider block mb-1">
+                      Turno Tarde:
+                    </span>
+                    <div className="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+                      <span className="material-symbols-outlined text-secondary text-[18px]">calendar_today</span>
+                      <span>Martes y Jueves</span>
+                    </div>
+                    <div className="flex items-center gap-space-xs text-secondary font-title-md text-title-md font-bold mt-0.5">
+                      <span className="material-symbols-outlined text-[18px]">schedule</span>
+                      <span>16:00 a 18:00 hs</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -140,18 +158,18 @@ export const GroupsSection: React.FC = () => {
             </div>
           </div>
 
-          {/* GRUPO 3: ADOLESCENTES / ADULTOS (A/A) */}
+          {/* GRUPO 3: ADOLESCENTES / ADULTOS */}
           <div className="flex flex-col rounded-3xl overflow-hidden bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 border border-surface-container-high group">
             <div className="relative h-60 overflow-hidden bg-primary-container/20">
               <img
                 alt="Acróbata realizando figura de suspensión en tela aérea con postura elegante"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src={ADOLES_ADULTOS_IMAGE}
+                src={scheduleSilksImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
               <div className="absolute top-4 left-4">
                 <span className="px-space-sm py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-xs text-label-xs uppercase font-bold tracking-wider">
-                  Grupo A/A
+                  Grupo Adolescentes / Adultos
                 </span>
               </div>
               <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center text-on-primary">
@@ -164,7 +182,7 @@ export const GroupsSection: React.FC = () => {
             <div className="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
               <div className="space-y-space-sm">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-headline-sm text-headline-sm text-primary">Adolescentes / Adultos (A/A)</h3>
+                  <h3 className="font-headline-sm text-headline-sm text-primary">Adolescentes / Adultos</h3>
                   <span className="text-xs px-2.5 py-1 rounded-full bg-surface-container text-secondary font-bold">
                     15 - 18 alumnas
                   </span>

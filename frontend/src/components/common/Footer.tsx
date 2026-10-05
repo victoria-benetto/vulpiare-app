@@ -69,19 +69,19 @@ export const Footer: React.FC = () => {
             <h4 className="font-title-md text-title-md text-primary mb-space-md uppercase tracking-wide">Grupos &amp; Horarios</h4>
             <div className="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
               <div className="flex flex-col border-b border-surface-container pb-1">
-                <span className="font-title-md text-title-md text-primary">J/A (Mañana)</span>
+                <span className="font-title-md text-title-md text-primary">Jóvenes / Adultos (Mañana)</span>
                 <span>Lunes y Miércoles · 08:00 a 10:00 hs</span>
               </div>
               <div className="flex flex-col border-b border-surface-container pb-1">
-                <span className="font-title-md text-title-md text-primary">Niñas (N)</span>
+                <span className="font-title-md text-title-md text-primary">Niñas</span>
                 <span>Lun, Mié y Vie · 16:45 a 18:00 hs</span>
               </div>
               <div className="flex flex-col border-b border-surface-container pb-1">
-                <span className="font-title-md text-title-md text-primary">J/A (Tarde)</span>
+                <span className="font-title-md text-title-md text-primary">Jóvenes / Adultos (Tarde)</span>
                 <span>Martes y Jueves · 16:00 a 18:00 hs</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-title-md text-title-md text-primary">A/A (Tarde)</span>
+                <span className="font-title-md text-title-md text-primary">Adolescentes / Adultos</span>
                 <span>Lun, Mié y Vie · 17:30 a 19:00 hs</span>
               </div>
             </div>

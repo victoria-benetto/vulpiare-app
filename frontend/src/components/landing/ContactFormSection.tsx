@@ -5,7 +5,7 @@ import { VULPIARE_PHONE, INSTAGRAM_URL, GOOGLE_MAPS_LOCATION_URL } from '../../c
 export const ContactFormSection: React.FC = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [group, setGroup] = useState('Jóvenes/Adultos (J/A) - Mañana (08:00 a 10:00)');
+  const [group, setGroup] = useState('Jóvenes / Adultos - Mañana (08:00 a 10:00)');
   const [experience, setExperience] = useState('Empiezo desde cero');
   const [message, setMessage] = useState('');
 
@@ -164,17 +164,17 @@ export const ContactFormSection: React.FC = () => {
                       value={group}
                       onChange={(e) => setGroup(e.target.value)}
                     >
-                      <option value="Jóvenes/Adultos (J/A) - Mañana (08:00 a 10:00)">
-                        Jóvenes/Adultos (J/A) - Mañana (08:00 a 10:00)
+                      <option value="Jóvenes/Adultos - Mañana (08:00 a 10:00)">
+                        Jóvenes / Adultos - Mañana (08:00 a 10:00)
                       </option>
-                      <option value="Jóvenes/Adultos (J/A) - Tarde (16:00 a 18:00)">
-                        Jóvenes/Adultos (J/A) - Tarde (16:00 a 18:00)
+                      <option value="Jóvenes/Adultos - Tarde (16:00 a 18:00)">
+                        Jóvenes / Adultos - Tarde (16:00 a 18:00)
                       </option>
-                      <option value="Niñas (N) - 16:45 a 18:00 hs">
-                        Niñas (N) - 16:45 a 18:00 hs (desde 6 años)
+                      <option value="Niñas - 16:45 a 18:00 hs">
+                        Niñas - 16:45 a 18:00 hs (desde 6 años)
                       </option>
-                      <option value="Adolescentes/Adultos (A/A) - 17:30 a 19:00 hs">
-                        Adolescentes/Adultos (A/A) - 17:30 a 19:00 hs
+                      <option value="Adolescentes/Adultos - 17:30 a 19:00 hs">
+                        Adolescentes / Adultos - 17:30 a 19:00 hs
                       </option>
                     </select>
                   </div>
