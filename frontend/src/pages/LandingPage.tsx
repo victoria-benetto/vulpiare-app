@@ -8,6 +8,7 @@ import { GroupsSection } from '../components/landing/GroupsSection';
 import { ScheduleSection } from '../components/landing/ScheduleSection';
 import { SecuritySection } from '../components/landing/SecuritySection';
 import { MuestrasSection } from '../components/landing/MuestrasSection';
+import { CompetenciasSection } from '../components/landing/CompetenciasSection';
 import { LocationSection } from '../components/landing/LocationSection';
 import { FaqSection } from '../components/landing/FaqSection';
 import { SocialSection } from '../components/landing/SocialSection';
@@ -19,7 +20,7 @@ export const LandingPage: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['inicio', 'grupos', 'horarios', 'seguridad', 'muestras', 'ubicacion', 'faq', 'contacto'];
+      const sections = ['inicio', 'grupos', 'horarios', 'seguridad', 'muestras', 'competencias', 'ubicacion', 'faq', 'contacto'];
       const scrollPosition = window.scrollY + 200;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -56,7 +57,10 @@ export const LandingPage: React.FC = () => {
         {/* SECCIÓN 5: MUESTRAS ARTÍSTICAS ANUALES */}
         <MuestrasSection />
 
-        {/* SECCIÓN 6: UBICACIÓN DE VULPIARE */}
+        {/* SECCIÓN 6: COMPETENCIAS FLAVIO MENDOZA */}
+        <CompetenciasSection />
+
+        {/* SECCIÓN 7: UBICACIÓN DE VULPIARE */}
         <LocationSection />
 
         {/* SECCIÓN 7: PREGUNTAS FRECUENTES (FAQ) */}

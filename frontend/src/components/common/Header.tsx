@@ -26,6 +26,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection = 'inicio' }) => {
     { id: 'horarios', label: 'Horarios', href: '#horarios', icon: 'calendar_today' },
     { id: 'seguridad', label: 'Seguridad', href: '#seguridad', icon: 'shield' },
     { id: 'muestras', label: 'Muestras', href: '#muestras', icon: 'theater_comedy' },
+    { id: 'competencias', label: 'Competencias', href: '#competencias', icon: 'emoji_events' },
     { id: 'ubicacion', label: 'Ubicación', href: '#ubicacion', icon: 'location_on' },
     { id: 'faq', label: 'Preguntas Frecuentes', href: '#faq', icon: 'quiz' },
     { id: 'contacto', label: 'Contacto', href: '#contacto', icon: 'person' },
