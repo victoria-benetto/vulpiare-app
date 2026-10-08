@@ -71,21 +71,6 @@ export const CompetenciasSection: React.FC = () => {
                 </span>
               </div>
             </div>
-
-            {/* Tarjeta Inferior de Representación */}
-            <div className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container flex items-center gap-3 sm:gap-3.5">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary-fixed/70 text-primary flex items-center justify-center shrink-0 shadow-xs">
-                <span className="material-symbols-outlined text-[18px] sm:text-[20px]">verified</span>
-              </div>
-              <div>
-                <h4 className="font-title-md text-xs sm:text-sm text-primary font-bold">
-                  Representación Provincial y Federal
-                </h4>
-                <p className="font-body-sm text-[10px] sm:text-[11px] md:text-xs text-on-surface-variant mt-0.5">
-                  Mendoza y Buenos Aires en categorías Elite y Premium
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Columna Derecha: Tarjetas de Resultados 2025 y 2026 */}
