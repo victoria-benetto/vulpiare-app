@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from '../components/common/Header';
-import { MobileBottomBar } from '../components/common/MobileBottomBar';
 import { Footer } from '../components/common/Footer';
 import { FloatingWhatsAppButton } from '../components/common/FloatingWhatsAppButton';
 import { HeroSection } from '../components/landing/HeroSection';
@@ -81,9 +80,6 @@ export const LandingPage: React.FC = () => {
 
       {/* Botón Flotante de WhatsApp */}
       <FloatingWhatsAppButton />
-
-      {/* Barra de Navegación Inferior para Dispositivos Móviles */}
-      <MobileBottomBar activeSection={activeSection} />
     </div>
   );
 };
