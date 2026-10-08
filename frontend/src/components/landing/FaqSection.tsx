@@ -62,42 +62,42 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section className="w-full py-space-3xl bg-surface-container-low scroll-mt-20" id="faq">
-      <div className="max-w-4xl mx-auto px-margin">
-        <div className="text-center max-w-2xl mx-auto mb-space-2xl">
-          <span className="font-label-xs text-label-xs uppercase tracking-widest text-secondary font-bold">
+    <section className="w-full py-10 sm:py-16 lg:py-space-3xl bg-surface-container-low scroll-mt-20" id="faq">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-margin">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-space-2xl">
+          <span className="font-label-xs text-[10px] sm:text-label-xs uppercase tracking-widest text-secondary font-bold">
             Respuestas Claras
           </span>
-          <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight mt-space-xs">
+          <h2 className="font-headline-lg text-2xl sm:text-3xl lg:text-headline-lg text-primary tracking-tight font-bold mt-1">
             Preguntas Frecuentes
           </h2>
-          <p className="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+          <p className="font-body-md text-xs sm:text-body-md text-on-surface-variant mt-2">
             Todo lo que necesitás saber antes de tu primera clase en Vulpiare.
           </p>
         </div>
 
         {/* Acordeón FAQ */}
-        <div className="space-y-space-sm">
+        <div className="space-y-3 sm:space-y-space-sm">
           {faqs.map((faq) => {
             const isOpen = openId === faq.id;
             return (
               <div
                 key={faq.id}
-                className="rounded-3xl bg-surface-container-lowest border border-surface-container-high p-space-md transition-all duration-300 shadow-sm"
+                className="rounded-2xl sm:rounded-3xl bg-surface-container-lowest border border-surface-container-high p-3.5 sm:p-space-md transition-all duration-300 shadow-sm"
               >
                 <button
-                  className="w-full flex items-center justify-between text-left cursor-pointer font-title-lg text-title-lg text-primary font-bold gap-3"
+                  className="w-full flex items-center justify-between text-left cursor-pointer font-title-lg text-xs sm:text-title-lg text-primary font-bold gap-3"
                   onClick={() => toggleFaq(faq.id)}
                   type="button"
                 >
-                  <span className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-secondary-fixed text-primary flex items-center justify-center text-sm font-bold shrink-0">
+                  <span className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                    <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-secondary-fixed text-primary flex items-center justify-center text-xs sm:text-sm font-bold shrink-0">
                       {faq.id}
                     </span>
-                    <span className="text-base sm:text-title-lg">{faq.question}</span>
+                    <span className="text-xs sm:text-base leading-snug">{faq.question}</span>
                   </span>
                   <span
-                    className={`material-symbols-outlined text-secondary transition-transform duration-300 shrink-0 ${
+                    className={`material-symbols-outlined text-secondary transition-transform duration-300 shrink-0 text-[20px] sm:text-[24px] ${
                       isOpen ? 'rotate-180' : 'rotate-0'
                     }`}
                   >
@@ -105,7 +105,7 @@ export const FaqSection: React.FC = () => {
                   </span>
                 </button>
                 {isOpen && (
-                  <div className="mt-space-md pl-0 sm:pl-11 pr-2 sm:pr-4 font-body-md text-body-md text-on-surface-variant leading-relaxed border-t border-surface-container pt-3 animate-fadeIn">
+                  <div className="mt-3 sm:mt-space-md pl-0 sm:pl-11 pr-1 sm:pr-4 font-body-md text-xs sm:text-body-md text-on-surface-variant leading-relaxed border-t border-surface-container pt-3 animate-fadeIn">
                     {faq.answer}
                   </div>
                 )}
@@ -117,3 +117,5 @@ export const FaqSection: React.FC = () => {
     </section>
   );
 };
+
+export default FaqSection;

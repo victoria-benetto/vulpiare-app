@@ -60,25 +60,25 @@ export const ScheduleSection: React.FC = () => {
     : scheduleData.filter((item) => item.turno === activeFilter);
 
   return (
-    <section className="w-full py-space-3xl bg-surface scroll-mt-20" id="horarios">
-      <div className="max-w-7xl mx-auto px-margin">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+    <section className="w-full py-10 sm:py-16 lg:py-space-3xl bg-surface scroll-mt-20" id="horarios">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-margin">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 lg:mb-space-xl gap-4 sm:gap-space-md">
           <div>
-            <span className="font-label-xs text-label-xs uppercase tracking-widest text-secondary font-bold">
+            <span className="font-label-xs text-[10px] sm:text-label-xs uppercase tracking-widest text-secondary font-bold">
               Cronograma Oficial 2026
             </span>
-            <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight mt-space-xs">
+            <h2 className="font-headline-lg text-2xl sm:text-3xl lg:text-headline-lg text-primary tracking-tight font-bold mt-1 sm:mt-space-xs">
               Grilla de Horarios de Acrobacias en Tela
             </h2>
-            <p className="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+            <p className="font-body-md text-xs sm:text-body-md text-on-surface-variant mt-1.5 sm:mt-space-xs">
               Elegí tu turno. Grupos reducidos de 15 a 18 personas para acompañamiento continuo guiado por Victoria.
             </p>
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex items-center gap-1 p-1 rounded-full bg-surface-container-high self-start md:self-auto max-w-full overflow-x-auto">
+          <div className="flex items-center gap-1 p-1 rounded-full bg-surface-container-high self-start md:self-auto max-w-full overflow-x-auto shrink-0">
             <button
-              className={`px-3.5 sm:px-space-md py-1.5 sm:py-space-xs rounded-full font-label-md text-xs sm:text-label-md uppercase tracking-wider transition-all font-bold whitespace-nowrap ${
+              className={`px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full font-label-md text-xs sm:text-label-md uppercase tracking-wider transition-all font-bold whitespace-nowrap ${
                 activeFilter === 'all'
                   ? 'bg-primary text-on-primary shadow-sm'
                   : 'bg-transparent text-on-surface-variant hover:text-primary'
@@ -89,7 +89,7 @@ export const ScheduleSection: React.FC = () => {
               Todos
             </button>
             <button
-              className={`px-3.5 sm:px-space-md py-1.5 sm:py-space-xs rounded-full font-label-md text-xs sm:text-label-md uppercase tracking-wider transition-all font-bold whitespace-nowrap ${
+              className={`px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full font-label-md text-xs sm:text-label-md uppercase tracking-wider transition-all font-bold whitespace-nowrap ${
                 activeFilter === 'manana'
                   ? 'bg-primary text-on-primary shadow-sm'
                   : 'bg-transparent text-on-surface-variant hover:text-primary'
@@ -100,7 +100,7 @@ export const ScheduleSection: React.FC = () => {
               Mañana
             </button>
             <button
-              className={`px-3.5 sm:px-space-md py-1.5 sm:py-space-xs rounded-full font-label-md text-xs sm:text-label-md uppercase tracking-wider transition-all font-bold whitespace-nowrap ${
+              className={`px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full font-label-md text-xs sm:text-label-md uppercase tracking-wider transition-all font-bold whitespace-nowrap ${
                 activeFilter === 'tarde'
                   ? 'bg-primary text-on-primary shadow-sm'
                   : 'bg-transparent text-on-surface-variant hover:text-primary'
@@ -113,36 +113,36 @@ export const ScheduleSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Tabla Elegante Responsiva para Desktop */}
-        <div className="hidden md:block w-full overflow-hidden rounded-3xl bg-surface-container-lowest shadow-md border border-surface-container">
+        {/* Tabla Elegante Responsiva para Desktop & Tablet */}
+        <div className="hidden md:block w-full overflow-hidden rounded-2xl sm:rounded-3xl bg-surface-container-lowest shadow-md border border-surface-container">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-surface-container-high text-primary font-label-md text-label-md uppercase tracking-wider">
-                  <th className="py-space-md px-space-lg">Grupo / Edad</th>
-                  <th className="py-space-md px-space-md">Días</th>
-                  <th className="py-space-md px-space-md">Horario</th>
-                  <th className="py-space-md px-space-md">Turno</th>
-                  <th className="py-space-md px-space-md">Nivel &amp; Cupo</th>
-                  <th className="py-space-md px-space-lg text-right">Acción</th>
+                <tr className="bg-surface-container-high text-primary font-label-md text-xs sm:text-label-md uppercase tracking-wider">
+                  <th className="py-3 sm:py-space-md px-4 sm:px-space-lg">Grupo / Edad</th>
+                  <th className="py-3 sm:py-space-md px-3 sm:px-space-md">Días</th>
+                  <th className="py-3 sm:py-space-md px-3 sm:px-space-md">Horario</th>
+                  <th className="py-3 sm:py-space-md px-3 sm:px-space-md">Turno</th>
+                  <th className="py-3 sm:py-space-md px-3 sm:px-space-md">Nivel &amp; Cupo</th>
+                  <th className="py-3 sm:py-space-md px-4 sm:px-space-lg text-right">Acción</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-surface-container text-on-surface font-body-sm text-body-sm">
+              <tbody className="divide-y divide-surface-container text-on-surface font-body-sm text-xs sm:text-body-sm">
                 {filteredSchedule.map((item) => (
                   <tr key={item.id} className="hover:bg-surface-container-low transition-colors">
-                    <td className="py-space-md px-space-lg">
+                    <td className="py-3 sm:py-space-md px-4 sm:px-space-lg">
                       <div className="flex items-start gap-2.5">
                         <span className={`w-2.5 h-2.5 rounded-full shrink-0 mt-1.5 ${item.turno === 'manana' ? 'bg-secondary' : 'bg-primary'}`} />
                         <div>
-                          <span className="font-title-md text-title-md text-primary font-bold block leading-tight">{item.grupo}</span>
-                          <span className="text-xs text-on-surface-variant block mt-0.5">{item.subtitulo}</span>
+                          <span className="font-title-md text-xs sm:text-title-md text-primary font-bold block leading-tight">{item.grupo}</span>
+                          <span className="text-[11px] sm:text-xs text-on-surface-variant block mt-0.5">{item.subtitulo}</span>
                         </div>
                       </div>
                     </td>
-                    <td className="py-space-md px-space-md font-semibold text-on-surface">{item.dias}</td>
-                    <td className="py-space-md px-space-md font-bold text-primary text-base whitespace-nowrap">{item.horario}</td>
-                    <td className="py-space-md px-space-md whitespace-nowrap">
-                      <span className={`px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap inline-block ${
+                    <td className="py-3 sm:py-space-md px-3 sm:px-space-md font-semibold text-on-surface whitespace-nowrap">{item.dias}</td>
+                    <td className="py-3 sm:py-space-md px-3 sm:px-space-md font-bold text-primary text-sm sm:text-base whitespace-nowrap">{item.horario}</td>
+                    <td className="py-3 sm:py-space-md px-3 sm:px-space-md whitespace-nowrap">
+                      <span className={`px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-bold whitespace-nowrap inline-block ${
                         item.turno === 'manana'
                           ? 'bg-surface-container text-secondary'
                           : 'bg-surface-container-high text-primary'
@@ -150,16 +150,16 @@ export const ScheduleSection: React.FC = () => {
                         {item.turnoEtiqueta}
                       </span>
                     </td>
-                    <td className="py-space-md px-space-md">
+                    <td className="py-3 sm:py-space-md px-3 sm:px-space-md whitespace-nowrap">
                       <div className="flex flex-col">
-                        <span className="text-xs font-semibold text-[#2e7d32]">{item.nivel}</span>
-                        <span className="text-[11px] text-on-surface-variant">{item.cupo}</span>
+                        <span className="text-[11px] sm:text-xs font-semibold text-[#2e7d32]">{item.nivel}</span>
+                        <span className="text-[10px] sm:text-[11px] text-on-surface-variant">{item.cupo}</span>
                       </div>
                     </td>
-                    <td className="py-space-md px-space-lg text-right">
-                      <div className="flex items-center justify-end gap-2">
+                    <td className="py-3 sm:py-space-md px-4 sm:px-space-lg text-right">
+                      <div className="flex items-center justify-end gap-1.5 sm:gap-2">
                         <a
-                          className="px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs uppercase tracking-wider font-bold hover:bg-secondary-container transition-all whitespace-nowrap"
+                          className="px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-[10px] sm:text-label-xs uppercase tracking-wider font-bold hover:bg-secondary-container transition-all whitespace-nowrap"
                           href={`https://wa.me/${VULPIARE_PHONE}?text=Hola%20Victoria,%20consulto%20cupo%20para%20${encodeURIComponent(item.consultarText)}`}
                           rel="noopener noreferrer"
                           target="_blank"
@@ -167,7 +167,7 @@ export const ScheduleSection: React.FC = () => {
                           Consultar Cupo
                         </a>
                         <a
-                          className="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-xs text-label-xs uppercase tracking-wider font-bold hover:bg-primary-container transition-all whitespace-nowrap"
+                          className="px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary text-on-primary font-label-xs text-[10px] sm:text-label-xs uppercase tracking-wider font-bold hover:bg-primary-container transition-all whitespace-nowrap"
                           href={`https://wa.me/${VULPIARE_PHONE}?text=Hola%20Victoria,%20quiero%20agendar%20prueba%20para%20${encodeURIComponent(item.consultarText)}`}
                           rel="noopener noreferrer"
                           target="_blank"
@@ -197,10 +197,10 @@ export const ScheduleSection: React.FC = () => {
                 <span className="text-[11px] text-outline font-medium">{item.cupo}</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-                <h4 className="font-title-md text-title-md text-primary font-bold">{item.grupo}</h4>
+                <h4 className="font-title-md text-sm sm:text-title-md text-primary font-bold">{item.grupo}</h4>
                 <span className="font-title-md text-sm sm:text-title-md text-secondary font-bold">{item.horario}</span>
               </div>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 pt-1 border-t border-surface-container/60">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 pt-2 border-t border-surface-container/60">
                 <span className="font-body-sm text-xs sm:text-body-sm text-on-surface-variant font-medium">{item.dias}</span>
                 <a
                   className="w-full sm:w-auto px-4 py-2 rounded-full bg-primary text-on-primary font-label-xs text-xs font-bold hover:bg-primary-container transition-colors text-center whitespace-nowrap"
@@ -216,15 +216,15 @@ export const ScheduleSection: React.FC = () => {
         </div>
 
         {/* Callout debajo de horarios */}
-        <div className="mt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md p-4 sm:p-space-md rounded-2xl bg-surface-container border border-secondary/15">
-          <div className="flex items-center gap-3 sm:gap-space-sm">
-            <span className="material-symbols-outlined text-secondary text-[24px] flex-shrink-0">chat</span>
-            <span className="font-body-md text-sm sm:text-body-md text-on-surface leading-snug">
+        <div className="mt-6 sm:mt-space-lg flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-space-md p-4 sm:p-space-md rounded-2xl bg-surface-container border border-secondary/15">
+          <div className="flex items-center gap-2.5 sm:gap-space-sm text-center sm:text-left">
+            <span className="material-symbols-outlined text-secondary text-[22px] sm:text-[24px] shrink-0">chat</span>
+            <span className="font-body-md text-xs sm:text-body-md text-on-surface leading-snug">
               ¿Tenés dudas sobre cuál turno es mejor para tu rutina? Hablá directo con Victoria.
             </span>
           </div>
           <a
-            className="w-full sm:w-auto text-center justify-center px-space-lg py-2.5 sm:py-space-xs rounded-full bg-primary text-on-primary font-label-md text-xs sm:text-label-md uppercase tracking-wider hover:bg-primary-container transition-all flex items-center gap-1 font-semibold whitespace-nowrap"
+            className="w-full sm:w-auto text-center justify-center px-5 sm:px-space-lg py-2.5 sm:py-space-xs rounded-full bg-primary text-on-primary font-label-md text-xs sm:text-label-md uppercase tracking-wider hover:bg-primary-container transition-all flex items-center gap-1 font-semibold whitespace-nowrap shrink-0"
             href={`https://wa.me/${VULPIARE_PHONE}`}
             rel="noopener noreferrer"
             target="_blank"
@@ -237,3 +237,5 @@ export const ScheduleSection: React.FC = () => {
     </section>
   );
 };
+
+export default ScheduleSection;
