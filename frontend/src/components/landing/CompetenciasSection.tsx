@@ -1,5 +1,4 @@
 import React from 'react';
-import competenciaImg from '../../assets/images/competencia-profe-vicky.jpg';
 import { VULPIARE_PHONE } from '../../constants/config';
 
 export const CompetenciasSection: React.FC = () => {
@@ -29,55 +28,12 @@ export const CompetenciasSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Grid de Contenido Principal (Columna foto izquierda, Columna resultados derecha) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-start mt-8 sm:mt-10 lg:mt-12">
+        {/* Grid de Tarjetas de Resultados 2025 y 2026 (3 columnas) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 items-stretch mt-8 sm:mt-10 lg:mt-12">
           
-          {/* Columna Izquierda: Foto Destacada y Tarjeta de Representación */}
-          <div className="lg:col-span-5 flex flex-col gap-3.5 sm:gap-5">
-            {/* Tarjeta con Foto */}
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-surface-container bg-surface-container aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] max-h-[500px] sm:max-h-none w-full">
-              <img
-                alt="Profe Vicky en competencia de telas aéreas Flavio Mendoza con trofeo de Campeona"
-                className="w-full h-full object-cover object-center"
-                src={competenciaImg}
-              />
-
-              {/* Badge superior sobre foto */}
-              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-md text-primary text-[10px] sm:text-xs font-bold tracking-wide uppercase border border-surface-container z-10">
-                <span className="material-symbols-outlined text-[14px] sm:text-[15px] text-secondary">emoji_events</span>
-                <span>Certamen Flavio Mendoza</span>
-              </div>
-
-              {/* Gradient overlay inferior */}
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent pointer-events-none" />
-
-              {/* Card flotante inferior sobre la foto */}
-              <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-4 sm:left-4 sm:right-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md shadow-lg border border-surface-container flex items-center justify-between gap-2 sm:gap-3 z-10">
-                <div className="flex items-center gap-2.5 sm:gap-3">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-secondary-fixed/80 text-primary flex items-center justify-center font-bold shrink-0 shadow-sm">
-                    <span className="material-symbols-outlined text-[18px] sm:text-[22px]">military_tech</span>
-                  </div>
-                  <div>
-                    <h4 className="font-title-md text-[11px] sm:text-xs md:text-sm text-primary font-bold leading-tight">
-                      Profe Vicky · Campeona Nacional
-                    </h4>
-                    <p className="font-body-sm text-[10px] sm:text-[11px] md:text-xs text-on-surface-variant mt-0.5">
-                      1.º Puesto Premium &amp; Mejor Coach
-                    </p>
-                  </div>
-                </div>
-                <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-secondary-fixed text-primary font-bold text-[10px] sm:text-xs uppercase tracking-wider shadow-xs shrink-0">
-                  ORO
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Columna Derecha: Tarjetas de Resultados 2025 y 2026 */}
-          <div className="lg:col-span-7 flex flex-col gap-3.5 sm:gap-5">
-            
-            {/* CARD 1: 2025 · Selectiva Mendoza */}
-            <div className="p-4 sm:p-5 md:p-6 rounded-2xl sm:rounded-3xl bg-surface-container-lowest shadow-sm border border-surface-container flex flex-col gap-2.5 sm:gap-3 hover:shadow-md transition-shadow">
+          {/* CARD 1: 2025 · Selectiva Mendoza */}
+          <div className="p-4 sm:p-5 md:p-6 rounded-2xl sm:rounded-3xl bg-surface-container-lowest shadow-sm border border-surface-container flex flex-col justify-between gap-3 hover:shadow-md transition-shadow">
+            <div className="flex flex-col gap-2.5 sm:gap-3">
               <div className="flex items-center justify-between gap-2">
                 <span className="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-bold text-[11px] sm:text-xs">
                   2025
@@ -112,9 +68,11 @@ export const CompetenciasSection: React.FC = () => {
                 </li>
               </ul>
             </div>
+          </div>
 
-            {/* CARD 2: 2025 · Finales Nacionales en Buenos Aires */}
-            <div className="p-4 sm:p-5 md:p-6 rounded-2xl sm:rounded-3xl bg-surface-container-lowest shadow-sm border border-surface-container flex flex-col gap-2.5 sm:gap-3 hover:shadow-md transition-shadow">
+          {/* CARD 2: 2025 · Finales Nacionales en Buenos Aires */}
+          <div className="p-4 sm:p-5 md:p-6 rounded-2xl sm:rounded-3xl bg-surface-container-lowest shadow-sm border border-surface-container flex flex-col justify-between gap-3 hover:shadow-md transition-shadow">
+            <div className="flex flex-col gap-2.5 sm:gap-3">
               <div className="flex items-center justify-between gap-2">
                 <span className="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-bold text-[11px] sm:text-xs">
                   2025
@@ -152,14 +110,16 @@ export const CompetenciasSection: React.FC = () => {
                 <li className="flex items-start gap-2 pt-2 border-t border-surface-container/60">
                   <span className="text-sm sm:text-base leading-none">✨</span>
                   <span className="text-[11px] sm:text-xs md:text-sm text-on-surface-variant leading-relaxed">
-                    <strong className="font-bold text-primary">Menciones especiales</strong> por composición, creatividad, coreografía e interpretación de las presentaciones, destacando no solo el resultado deportivo, sino la calidad artística de cada propuesta. ✨📣
+                    <strong className="font-bold text-primary">Menciones especiales</strong> por composición, creatividad, coreografía e interpretación de las presentaciones. ✨📣
                   </span>
                 </li>
               </ul>
             </div>
+          </div>
 
-            {/* CARD 3: 2026 · Selectiva Mendoza */}
-            <div className="p-4 sm:p-5 md:p-6 rounded-2xl sm:rounded-3xl bg-surface-container-lowest shadow-sm border border-surface-container flex flex-col gap-2.5 sm:gap-3 hover:shadow-md transition-shadow">
+          {/* CARD 3: 2026 · Selectiva Mendoza */}
+          <div className="p-4 sm:p-5 md:p-6 rounded-2xl sm:rounded-3xl bg-surface-container-lowest shadow-sm border border-surface-container flex flex-col justify-between gap-3 hover:shadow-md transition-shadow">
+            <div className="flex flex-col gap-2.5 sm:gap-3">
               <div className="flex items-center justify-between gap-2">
                 <span className="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-bold text-[11px] sm:text-xs">
                   2026
@@ -202,7 +162,6 @@ export const CompetenciasSection: React.FC = () => {
                 </li>
               </ul>
             </div>
-
           </div>
 
         </div>
